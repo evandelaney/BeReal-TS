@@ -10,4 +10,10 @@ final class User: Decodable {
     var lastName: String
     var rootItem: Folder
 
+    init(firstName: String, lastName: String, rootItem: Folder)
+    {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.rootItem = rootItem
+    }
 }
