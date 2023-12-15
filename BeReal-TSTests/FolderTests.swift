@@ -28,7 +28,7 @@ final class FolderTests: XCTestCase {
                    }
                    """.data(using: .utf8)!
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(.apiDateFormatter)
+        decoder.dateDecodingStrategy = .apiFormat
         
         let file = try decoder.decode(File.self, from: json)
 

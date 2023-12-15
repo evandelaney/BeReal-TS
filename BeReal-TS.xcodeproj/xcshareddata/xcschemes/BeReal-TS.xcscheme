@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:BeReal-TS.xctestplan"
+            reference = "container:BeReal-TS/BeReal-TS.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -41,17 +41,6 @@
                BlueprintIdentifier = "37806CCC2B2BF7DD00A580BB"
                BuildableName = "BeReal-TSTests.xctest"
                BlueprintName = "BeReal-TSTests"
-               ReferencedContainer = "container:BeReal-TS.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37806CD62B2BF7DD00A580BB"
-               BuildableName = "BeReal-TSUITests.xctest"
-               BlueprintName = "BeReal-TSUITests"
                ReferencedContainer = "container:BeReal-TS.xcodeproj">
             </BuildableReference>
          </TestableReference>

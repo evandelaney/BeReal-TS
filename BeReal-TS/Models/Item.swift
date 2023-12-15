@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct FolderIdentifier: Decodable, RawRepresentable {
+struct FolderIdentifier: Decodable, RawRepresentable, Equatable {
     let rawValue: String
 }
 
