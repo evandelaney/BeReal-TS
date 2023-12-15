@@ -24,6 +24,10 @@
 		37806D062B2C070E00A580BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D052B2C070E00A580BB /* User.swift */; };
 		37806D082B2C081500A580BB /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D072B2C081500A580BB /* UserTests.swift */; };
 		37806D0A2B2C09E000A580BB /* DateDecodingStrategy+BeReal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D092B2C09E000A580BB /* DateDecodingStrategy+BeReal.swift */; };
+		37806D0D2B2C0CFB00A580BB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D0C2B2C0CFB00A580BB /* APIClient.swift */; };
+		37806D102B2C194600A580BB /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 37806D0F2B2C194600A580BB /* KeychainSwift */; };
+		37806D122B2C195B00A580BB /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D112B2C195B00A580BB /* Authentication.swift */; };
+		37806D142B2C1E4B00A580BB /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D132B2C1E4B00A580BB /* APIClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,9 @@
 		37806D052B2C070E00A580BB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		37806D072B2C081500A580BB /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		37806D092B2C09E000A580BB /* DateDecodingStrategy+BeReal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+BeReal.swift"; sourceTree = "<group>"; };
+		37806D0C2B2C0CFB00A580BB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		37806D112B2C195B00A580BB /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		37806D132B2C1E4B00A580BB /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37806D102B2C194600A580BB /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +106,7 @@
 		37806CBF2B2BF7DC00A580BB /* BeReal-TS */ = {
 			isa = PBXGroup;
 			children = (
+				37806D0B2B2C0CEE00A580BB /* Services */,
 				37806CEA2B2BF88300A580BB /* App.swift */,
 				37806CFD2B2C024B00A580BB /* Extensions */,
 				37806CEE2B2BF8B500A580BB /* Models */,
@@ -125,6 +134,7 @@
 				37806CF92B2BFE6B00A580BB /* FileTests.swift */,
 				37806CFB2B2BFE7600A580BB /* FolderTests.swift */,
 				37806D072B2C081500A580BB /* UserTests.swift */,
+				37806D132B2C1E4B00A580BB /* APIClientTests.swift */,
 			);
 			path = "BeReal-TSTests";
 			sourceTree = "<group>";
@@ -135,8 +145,8 @@
 				37806CF22B2BF8F000A580BB /* File.swift */,
 				37806CF42B2BF8F000A580BB /* Folder.swift */,
 				37806CF32B2BF8F000A580BB /* Item.swift */,
-				37806CEF2B2BF8BE00A580BB /* API Responses */,
 				37806D052B2C070E00A580BB /* User.swift */,
+				37806CEF2B2BF8BE00A580BB /* API Responses */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +177,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		37806D0B2B2C0CEE00A580BB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				37806D0C2B2C0CFB00A580BB /* APIClient.swift */,
+				37806D112B2C195B00A580BB /* Authentication.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +202,9 @@
 			dependencies = (
 			);
 			name = "BeReal-TS";
+			packageProductDependencies = (
+				37806D0F2B2C194600A580BB /* KeychainSwift */,
+			);
 			productName = "BeReal-TS";
 			productReference = 37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +255,9 @@
 				Base,
 			);
 			mainGroup = 37806CB42B2BF7DC00A580BB;
+			packageReferences = (
+				37806D0E2B2C194500A580BB /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 37806CBE2B2BF7DC00A580BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,12 +295,14 @@
 				37806CF62B2BF8F000A580BB /* Item.swift in Sources */,
 				37806D0A2B2C09E000A580BB /* DateDecodingStrategy+BeReal.swift in Sources */,
 				37806CC32B2BF7DC00A580BB /* ContentView.swift in Sources */,
+				37806D0D2B2C0CFB00A580BB /* APIClient.swift in Sources */,
 				37806CF52B2BF8F000A580BB /* File.swift in Sources */,
 				37806CEB2B2BF88300A580BB /* App.swift in Sources */,
 				37806D062B2C070E00A580BB /* User.swift in Sources */,
 				37806CF12B2BF8E800A580BB /* ItemsResponse.swift in Sources */,
 				37806CFF2B2C025800A580BB /* DateFormatter+BeReal.swift in Sources */,
 				37806CF72B2BF8F000A580BB /* Folder.swift in Sources */,
+				37806D122B2C195B00A580BB /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +313,7 @@
 				37806D082B2C081500A580BB /* UserTests.swift in Sources */,
 				37806CED2B2BF89400A580BB /* ItemsResponseTests.swift in Sources */,
 				37806D022B2C056300A580BB /* File+UnitTest.swift in Sources */,
+				37806D142B2C1E4B00A580BB /* APIClientTests.swift in Sources */,
 				37806CFC2B2BFE7600A580BB /* FolderTests.swift in Sources */,
 				37806CFA2B2BFE6B00A580BB /* FileTests.swift in Sources */,
 				37806D042B2C058500A580BB /* Folder+UnitTest.swift in Sources */,
@@ -557,6 +585,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		37806D0E2B2C194500A580BB /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		37806D0F2B2C194600A580BB /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37806D0E2B2C194500A580BB /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37806CB52B2BF7DC00A580BB /* Project object */;
 }
