@@ -28,6 +28,10 @@
 		37806D102B2C194600A580BB /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 37806D0F2B2C194600A580BB /* KeychainSwift */; };
 		37806D122B2C195B00A580BB /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D112B2C195B00A580BB /* Authentication.swift */; };
 		37806D142B2C1E4B00A580BB /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D132B2C1E4B00A580BB /* APIClientTests.swift */; };
+		37806D172B2C25C300A580BB /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D162B2C25C300A580BB /* ItemsView.swift */; };
+		37806D192B2C26F400A580BB /* File+PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D182B2C26F400A580BB /* File+PreviewContent.swift */; };
+		37806D1B2B2C289500A580BB /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D1A2B2C289500A580BB /* ItemCell.swift */; };
+		37806D1D2B2C2AB600A580BB /* Folder+PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D1C2B2C2AB600A580BB /* Folder+PreviewContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		37806D0C2B2C0CFB00A580BB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		37806D112B2C195B00A580BB /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		37806D132B2C1E4B00A580BB /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		37806D162B2C25C300A580BB /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
+		37806D182B2C26F400A580BB /* File+PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+PreviewContent.swift"; sourceTree = "<group>"; };
+		37806D1A2B2C289500A580BB /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		37806D1C2B2C2AB600A580BB /* Folder+PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+PreviewContent.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,13 +114,13 @@
 		37806CBF2B2BF7DC00A580BB /* BeReal-TS */ = {
 			isa = PBXGroup;
 			children = (
-				37806D0B2B2C0CEE00A580BB /* Services */,
 				37806CEA2B2BF88300A580BB /* App.swift */,
 				37806CFD2B2C024B00A580BB /* Extensions */,
 				37806CEE2B2BF8B500A580BB /* Models */,
-				37806CC22B2BF7DC00A580BB /* ContentView.swift */,
-				37806CF82B2BF97500A580BB /* BeReal-TS.xctestplan */,
+				37806D0B2B2C0CEE00A580BB /* Services */,
+				37806D152B2C25A200A580BB /* Views */,
 				37806CC42B2BF7DD00A580BB /* Assets.xcassets */,
+				37806CF82B2BF97500A580BB /* BeReal-TS.xctestplan */,
 				37806CC62B2BF7DD00A580BB /* Preview Content */,
 			);
 			path = "BeReal-TS";
@@ -122,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */,
+				37806D182B2C26F400A580BB /* File+PreviewContent.swift */,
+				37806D1C2B2C2AB600A580BB /* Folder+PreviewContent.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -184,6 +194,16 @@
 				37806D112B2C195B00A580BB /* Authentication.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		37806D152B2C25A200A580BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37806CC22B2BF7DC00A580BB /* ContentView.swift */,
+				37806D162B2C25C300A580BB /* ItemsView.swift */,
+				37806D1A2B2C289500A580BB /* ItemCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,10 +316,14 @@
 				37806D0A2B2C09E000A580BB /* DateDecodingStrategy+BeReal.swift in Sources */,
 				37806CC32B2BF7DC00A580BB /* ContentView.swift in Sources */,
 				37806D0D2B2C0CFB00A580BB /* APIClient.swift in Sources */,
+				37806D1B2B2C289500A580BB /* ItemCell.swift in Sources */,
 				37806CF52B2BF8F000A580BB /* File.swift in Sources */,
+				37806D192B2C26F400A580BB /* File+PreviewContent.swift in Sources */,
 				37806CEB2B2BF88300A580BB /* App.swift in Sources */,
 				37806D062B2C070E00A580BB /* User.swift in Sources */,
+				37806D172B2C25C300A580BB /* ItemsView.swift in Sources */,
 				37806CF12B2BF8E800A580BB /* ItemsResponse.swift in Sources */,
+				37806D1D2B2C2AB600A580BB /* Folder+PreviewContent.swift in Sources */,
 				37806CFF2B2C025800A580BB /* DateFormatter+BeReal.swift in Sources */,
 				37806CF72B2BF8F000A580BB /* Folder.swift in Sources */,
 				37806D122B2C195B00A580BB /* Authentication.swift in Sources */,
