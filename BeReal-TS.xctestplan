@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "93F98BDA-E9F0-4AE5-9375-430610DF375A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BeReal-TS.xcodeproj",
+      "identifier" : "37806CBC2B2BF7DC00A580BB",
+      "name" : "BeReal-TS"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:BeReal-TS.xcodeproj",
+        "identifier" : "37806CCC2B2BF7DD00A580BB",
+        "name" : "BeReal-TSTests"
+      }
+    }
+  ],
+  "version" : 1
+}
