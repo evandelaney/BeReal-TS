@@ -41,6 +41,12 @@ final class Authentication {
     {
         self.keychain = keychain
     }
+    
+    func clear()
+    {
+        username = nil
+        password = nil
+    }
 }
 
 extension Authentication: AuthorizationDelegate {
