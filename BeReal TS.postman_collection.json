@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "12f28759-d2a4-431c-97e8-466dabe27b6b",
+		"name": "BeReal TS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7080"
+	},
+	"item": [
+		{
+			"name": "Current User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Set root_item environment variable\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.environment.set(\"root_item\", jsonData.rootItem.id)",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostname}}:{{port}}/me",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostname}}:{{port}}/items/{{root_item}}",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"items",
+						"{{root_item}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Item Data by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostname}}:{{port}}/items/{{created_item}}/data",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"items",
+						"{{created_item}}",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create File Item in Folder by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Set created_item environment variable\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.environment.set(\"created_item\", jsonData.id)",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/octet-stream",
+						"type": "text"
+					},
+					{
+						"key": "Content-Disposition",
+						"value": "attachment;filename*=utf-8''test.png",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://{{hostname}}:{{port}}/items/{{root_item}}",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"items",
+						"{{root_item}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Folder Item in Folder by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Set created_item environment variable\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.environment.set(\"created_item\", jsonData.id)",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"test-folder\"\n}"
+				},
+				"url": {
+					"raw": "http://{{hostname}}:{{port}}/items/{{root_item}}",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"items",
+						"{{root_item}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Item by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Clear created_item environment variable on 204 status\", function () {",
+							"    if (pm.response.code === 204) {",
+							"        pm.environment.unset(\"created_item\")",
+							"    }",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostname}}:{{port}}/items/{{created_item}}",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"items",
+						"{{created_item}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
