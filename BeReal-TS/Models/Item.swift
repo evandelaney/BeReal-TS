@@ -8,7 +8,7 @@ struct FolderIdentifier: Decodable, RawRepresentable, Equatable {
     let rawValue: String
 }
 
-protocol Item: Decodable {
+protocol Item: Decodable, ItemCellDisplayable {
     
     var identifier: String { get }
     
