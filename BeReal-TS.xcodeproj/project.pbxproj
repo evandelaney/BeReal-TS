@@ -7,40 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3761AA642B2BE03E00E3CD6E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AA632B2BE03E00E3CD6E /* App.swift */; };
-		3761AA662B2BE03E00E3CD6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AA652B2BE03E00E3CD6E /* ContentView.swift */; };
-		3761AA682B2BE03F00E3CD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3761AA672B2BE03F00E3CD6E /* Assets.xcassets */; };
-		3761AA6B2B2BE03F00E3CD6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3761AA6A2B2BE03F00E3CD6E /* Preview Assets.xcassets */; };
+		37806CC32B2BF7DC00A580BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CC22B2BF7DC00A580BB /* ContentView.swift */; };
+		37806CC52B2BF7DD00A580BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC42B2BF7DD00A580BB /* Assets.xcassets */; };
+		37806CC82B2BF7DD00A580BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */; };
+		37806CEB2B2BF88300A580BB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CEA2B2BF88300A580BB /* App.swift */; };
+		37806CED2B2BF89400A580BB /* ItemsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CEC2B2BF89400A580BB /* ItemsResponseTests.swift */; };
+		37806CF12B2BF8E800A580BB /* ItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CF02B2BF8E800A580BB /* ItemsResponse.swift */; };
+		37806CF52B2BF8F000A580BB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CF22B2BF8F000A580BB /* File.swift */; };
+		37806CF62B2BF8F000A580BB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CF32B2BF8F000A580BB /* Item.swift */; };
+		37806CF72B2BF8F000A580BB /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CF42B2BF8F000A580BB /* Folder.swift */; };
+		37806CFA2B2BFE6B00A580BB /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CF92B2BFE6B00A580BB /* FileTests.swift */; };
+		37806CFC2B2BFE7600A580BB /* FolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CFB2B2BFE7600A580BB /* FolderTests.swift */; };
+		37806CFF2B2C025800A580BB /* DateFormatter+BeReal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CFE2B2C025800A580BB /* DateFormatter+BeReal.swift */; };
+		37806D022B2C056300A580BB /* File+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D012B2C056300A580BB /* File+UnitTest.swift */; };
+		37806D042B2C058500A580BB /* Folder+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D032B2C058500A580BB /* Folder+UnitTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3761AA712B2BE03F00E3CD6E /* PBXContainerItemProxy */ = {
+		37806CCE2B2BF7DD00A580BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3761AA582B2BE03E00E3CD6E /* Project object */;
+			containerPortal = 37806CB52B2BF7DC00A580BB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3761AA5F2B2BE03E00E3CD6E;
+			remoteGlobalIDString = 37806CBC2B2BF7DC00A580BB;
 			remoteInfo = "BeReal-TS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3761AA602B2BE03E00E3CD6E /* BeReal-TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeReal-TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3761AA632B2BE03E00E3CD6E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		3761AA652B2BE03E00E3CD6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3761AA672B2BE03F00E3CD6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3761AA6A2B2BE03F00E3CD6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3761AA702B2BE03F00E3CD6E /* BeReal-TSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeReal-TSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeReal-TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37806CC22B2BF7DC00A580BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		37806CC42B2BF7DD00A580BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37806CCD2B2BF7DD00A580BB /* BeReal-TSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeReal-TSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37806CEA2B2BF88300A580BB /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		37806CEC2B2BF89400A580BB /* ItemsResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsResponseTests.swift; sourceTree = "<group>"; };
+		37806CF02B2BF8E800A580BB /* ItemsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsResponse.swift; sourceTree = "<group>"; };
+		37806CF22B2BF8F000A580BB /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		37806CF32B2BF8F000A580BB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		37806CF42B2BF8F000A580BB /* Folder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		37806CF82B2BF97500A580BB /* BeReal-TS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BeReal-TS.xctestplan"; sourceTree = "<group>"; };
+		37806CF92B2BFE6B00A580BB /* FileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
+		37806CFB2B2BFE7600A580BB /* FolderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTests.swift; sourceTree = "<group>"; };
+		37806CFE2B2C025800A580BB /* DateFormatter+BeReal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+BeReal.swift"; sourceTree = "<group>"; };
+		37806D012B2C056300A580BB /* File+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+UnitTest.swift"; sourceTree = "<group>"; };
+		37806D032B2C058500A580BB /* Folder+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+UnitTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3761AA5D2B2BE03E00E3CD6E /* Frameworks */ = {
+		37806CBA2B2BF7DC00A580BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3761AA6D2B2BE03F00E3CD6E /* Frameworks */ = {
+		37806CCA2B2BF7DD00A580BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,60 +71,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3761AA572B2BE03E00E3CD6E = {
+		37806CB42B2BF7DC00A580BB = {
 			isa = PBXGroup;
 			children = (
-				3761AA622B2BE03E00E3CD6E /* BeReal-TS */,
-				3761AA732B2BE03F00E3CD6E /* BeReal-TSTests */,
-				3761AA612B2BE03E00E3CD6E /* Products */,
+				37806CF82B2BF97500A580BB /* BeReal-TS.xctestplan */,
+				37806CBF2B2BF7DC00A580BB /* BeReal-TS */,
+				37806CD02B2BF7DD00A580BB /* BeReal-TSTests */,
+				37806CBE2B2BF7DC00A580BB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3761AA612B2BE03E00E3CD6E /* Products */ = {
+		37806CBE2B2BF7DC00A580BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3761AA602B2BE03E00E3CD6E /* BeReal-TS.app */,
-				3761AA702B2BE03F00E3CD6E /* BeReal-TSTests.xctest */,
+				37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */,
+				37806CCD2B2BF7DD00A580BB /* BeReal-TSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3761AA622B2BE03E00E3CD6E /* BeReal-TS */ = {
+		37806CBF2B2BF7DC00A580BB /* BeReal-TS */ = {
 			isa = PBXGroup;
 			children = (
-				3761AA632B2BE03E00E3CD6E /* App.swift */,
-				3761AA652B2BE03E00E3CD6E /* ContentView.swift */,
-				3761AA672B2BE03F00E3CD6E /* Assets.xcassets */,
-				3761AA692B2BE03F00E3CD6E /* Preview Content */,
+				37806CFD2B2C024B00A580BB /* Extensions */,
+				37806CEE2B2BF8B500A580BB /* Models */,
+				37806CEA2B2BF88300A580BB /* App.swift */,
+				37806CC22B2BF7DC00A580BB /* ContentView.swift */,
+				37806CC42B2BF7DD00A580BB /* Assets.xcassets */,
+				37806CC62B2BF7DD00A580BB /* Preview Content */,
 			);
 			path = "BeReal-TS";
 			sourceTree = "<group>";
 		};
-		3761AA692B2BE03F00E3CD6E /* Preview Content */ = {
+		37806CC62B2BF7DD00A580BB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				3761AA6A2B2BE03F00E3CD6E /* Preview Assets.xcassets */,
+				37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		3761AA732B2BE03F00E3CD6E /* BeReal-TSTests */ = {
+		37806CD02B2BF7DD00A580BB /* BeReal-TSTests */ = {
 			isa = PBXGroup;
 			children = (
+				37806D002B2C055500A580BB /* Utilities */,
+				37806CEC2B2BF89400A580BB /* ItemsResponseTests.swift */,
+				37806CF92B2BFE6B00A580BB /* FileTests.swift */,
+				37806CFB2B2BFE7600A580BB /* FolderTests.swift */,
 			);
 			path = "BeReal-TSTests";
+			sourceTree = "<group>";
+		};
+		37806CEE2B2BF8B500A580BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37806CF22B2BF8F000A580BB /* File.swift */,
+				37806CF42B2BF8F000A580BB /* Folder.swift */,
+				37806CF32B2BF8F000A580BB /* Item.swift */,
+				37806CEF2B2BF8BE00A580BB /* API Responses */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		37806CEF2B2BF8BE00A580BB /* API Responses */ = {
+			isa = PBXGroup;
+			children = (
+				37806CF02B2BF8E800A580BB /* ItemsResponse.swift */,
+			);
+			path = "API Responses";
+			sourceTree = "<group>";
+		};
+		37806CFD2B2C024B00A580BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37806CFE2B2C025800A580BB /* DateFormatter+BeReal.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37806D002B2C055500A580BB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				37806D012B2C056300A580BB /* File+UnitTest.swift */,
+				37806D032B2C058500A580BB /* Folder+UnitTest.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3761AA5F2B2BE03E00E3CD6E /* BeReal-TS */ = {
+		37806CBC2B2BF7DC00A580BB /* BeReal-TS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3761AA842B2BE03F00E3CD6E /* Build configuration list for PBXNativeTarget "BeReal-TS" */;
+			buildConfigurationList = 37806CE12B2BF7DD00A580BB /* Build configuration list for PBXNativeTarget "BeReal-TS" */;
 			buildPhases = (
-				3761AA5C2B2BE03E00E3CD6E /* Sources */,
-				3761AA5D2B2BE03E00E3CD6E /* Frameworks */,
-				3761AA5E2B2BE03E00E3CD6E /* Resources */,
+				37806CB92B2BF7DC00A580BB /* Sources */,
+				37806CBA2B2BF7DC00A580BB /* Frameworks */,
+				37806CBB2B2BF7DC00A580BB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -111,48 +175,47 @@
 			);
 			name = "BeReal-TS";
 			productName = "BeReal-TS";
-			productReference = 3761AA602B2BE03E00E3CD6E /* BeReal-TS.app */;
+			productReference = 37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3761AA6F2B2BE03F00E3CD6E /* BeReal-TSTests */ = {
+		37806CCC2B2BF7DD00A580BB /* BeReal-TSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3761AA872B2BE03F00E3CD6E /* Build configuration list for PBXNativeTarget "BeReal-TSTests" */;
+			buildConfigurationList = 37806CE42B2BF7DD00A580BB /* Build configuration list for PBXNativeTarget "BeReal-TSTests" */;
 			buildPhases = (
-				3761AA6C2B2BE03F00E3CD6E /* Sources */,
-				3761AA6D2B2BE03F00E3CD6E /* Frameworks */,
-				3761AA6E2B2BE03F00E3CD6E /* Resources */,
+				37806CC92B2BF7DD00A580BB /* Sources */,
+				37806CCA2B2BF7DD00A580BB /* Frameworks */,
+				37806CCB2B2BF7DD00A580BB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3761AA722B2BE03F00E3CD6E /* PBXTargetDependency */,
+				37806CCF2B2BF7DD00A580BB /* PBXTargetDependency */,
 			);
 			name = "BeReal-TSTests";
 			productName = "BeReal-TSTests";
-			productReference = 3761AA702B2BE03F00E3CD6E /* BeReal-TSTests.xctest */;
+			productReference = 37806CCD2B2BF7DD00A580BB /* BeReal-TSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3761AA582B2BE03E00E3CD6E /* Project object */ = {
+		37806CB52B2BF7DC00A580BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
-				ORGANIZATIONNAME = "";
 				TargetAttributes = {
-					3761AA5F2B2BE03E00E3CD6E = {
+					37806CBC2B2BF7DC00A580BB = {
 						CreatedOnToolsVersion = 15.1;
 					};
-					3761AA6F2B2BE03F00E3CD6E = {
+					37806CCC2B2BF7DD00A580BB = {
 						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 3761AA5F2B2BE03E00E3CD6E;
+						TestTargetID = 37806CBC2B2BF7DC00A580BB;
 					};
 				};
 			};
-			buildConfigurationList = 3761AA5B2B2BE03E00E3CD6E /* Build configuration list for PBXProject "BeReal-TS" */;
+			buildConfigurationList = 37806CB82B2BF7DC00A580BB /* Build configuration list for PBXProject "BeReal-TS" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -160,28 +223,28 @@
 				en,
 				Base,
 			);
-			mainGroup = 3761AA572B2BE03E00E3CD6E;
-			productRefGroup = 3761AA612B2BE03E00E3CD6E /* Products */;
+			mainGroup = 37806CB42B2BF7DC00A580BB;
+			productRefGroup = 37806CBE2B2BF7DC00A580BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3761AA5F2B2BE03E00E3CD6E /* BeReal-TS */,
-				3761AA6F2B2BE03F00E3CD6E /* BeReal-TSTests */,
+				37806CBC2B2BF7DC00A580BB /* BeReal-TS */,
+				37806CCC2B2BF7DD00A580BB /* BeReal-TSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3761AA5E2B2BE03E00E3CD6E /* Resources */ = {
+		37806CBB2B2BF7DC00A580BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3761AA6B2B2BE03F00E3CD6E /* Preview Assets.xcassets in Resources */,
-				3761AA682B2BE03F00E3CD6E /* Assets.xcassets in Resources */,
+				37806CC82B2BF7DD00A580BB /* Preview Assets.xcassets in Resources */,
+				37806CC52B2BF7DD00A580BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3761AA6E2B2BE03F00E3CD6E /* Resources */ = {
+		37806CCB2B2BF7DD00A580BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -191,34 +254,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3761AA5C2B2BE03E00E3CD6E /* Sources */ = {
+		37806CB92B2BF7DC00A580BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3761AA662B2BE03E00E3CD6E /* ContentView.swift in Sources */,
-				3761AA642B2BE03E00E3CD6E /* App.swift in Sources */,
+				37806CF62B2BF8F000A580BB /* Item.swift in Sources */,
+				37806CC32B2BF7DC00A580BB /* ContentView.swift in Sources */,
+				37806CF52B2BF8F000A580BB /* File.swift in Sources */,
+				37806CEB2B2BF88300A580BB /* App.swift in Sources */,
+				37806CF12B2BF8E800A580BB /* ItemsResponse.swift in Sources */,
+				37806CFF2B2C025800A580BB /* DateFormatter+BeReal.swift in Sources */,
+				37806CF72B2BF8F000A580BB /* Folder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3761AA6C2B2BE03F00E3CD6E /* Sources */ = {
+		37806CC92B2BF7DD00A580BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37806CED2B2BF89400A580BB /* ItemsResponseTests.swift in Sources */,
+				37806D022B2C056300A580BB /* File+UnitTest.swift in Sources */,
+				37806CFC2B2BFE7600A580BB /* FolderTests.swift in Sources */,
+				37806CFA2B2BFE6B00A580BB /* FileTests.swift in Sources */,
+				37806D042B2C058500A580BB /* Folder+UnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3761AA722B2BE03F00E3CD6E /* PBXTargetDependency */ = {
+		37806CCF2B2BF7DD00A580BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3761AA5F2B2BE03E00E3CD6E /* BeReal-TS */;
-			targetProxy = 3761AA712B2BE03F00E3CD6E /* PBXContainerItemProxy */;
+			target = 37806CBC2B2BF7DC00A580BB /* BeReal-TS */;
+			targetProxy = 37806CCE2B2BF7DD00A580BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3761AA822B2BE03F00E3CD6E /* Debug */ = {
+		37806CDF2B2BF7DD00A580BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -281,7 +354,7 @@
 			};
 			name = Debug;
 		};
-		3761AA832B2BE03F00E3CD6E /* Release */ = {
+		37806CE02B2BF7DD00A580BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -337,7 +410,7 @@
 			};
 			name = Release;
 		};
-		3761AA852B2BE03F00E3CD6E /* Debug */ = {
+		37806CE22B2BF7DD00A580BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -368,7 +441,7 @@
 			};
 			name = Debug;
 		};
-		3761AA862B2BE03F00E3CD6E /* Release */ = {
+		37806CE32B2BF7DD00A580BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -399,7 +472,7 @@
 			};
 			name = Release;
 		};
-		3761AA882B2BE03F00E3CD6E /* Debug */ = {
+		37806CE52B2BF7DD00A580BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -420,7 +493,7 @@
 			};
 			name = Debug;
 		};
-		3761AA892B2BE03F00E3CD6E /* Release */ = {
+		37806CE62B2BF7DD00A580BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -444,34 +517,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3761AA5B2B2BE03E00E3CD6E /* Build configuration list for PBXProject "BeReal-TS" */ = {
+		37806CB82B2BF7DC00A580BB /* Build configuration list for PBXProject "BeReal-TS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3761AA822B2BE03F00E3CD6E /* Debug */,
-				3761AA832B2BE03F00E3CD6E /* Release */,
+				37806CDF2B2BF7DD00A580BB /* Debug */,
+				37806CE02B2BF7DD00A580BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3761AA842B2BE03F00E3CD6E /* Build configuration list for PBXNativeTarget "BeReal-TS" */ = {
+		37806CE12B2BF7DD00A580BB /* Build configuration list for PBXNativeTarget "BeReal-TS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3761AA852B2BE03F00E3CD6E /* Debug */,
-				3761AA862B2BE03F00E3CD6E /* Release */,
+				37806CE22B2BF7DD00A580BB /* Debug */,
+				37806CE32B2BF7DD00A580BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3761AA872B2BE03F00E3CD6E /* Build configuration list for PBXNativeTarget "BeReal-TSTests" */ = {
+		37806CE42B2BF7DD00A580BB /* Build configuration list for PBXNativeTarget "BeReal-TSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3761AA882B2BE03F00E3CD6E /* Debug */,
-				3761AA892B2BE03F00E3CD6E /* Release */,
+				37806CE52B2BF7DD00A580BB /* Debug */,
+				37806CE62B2BF7DD00A580BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3761AA582B2BE03E00E3CD6E /* Project object */;
+	rootObject = 37806CB52B2BF7DC00A580BB /* Project object */;
 }
