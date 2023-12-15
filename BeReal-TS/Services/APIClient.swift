@@ -10,7 +10,7 @@ protocol URLSessionAsync {
 
 extension URLSession: URLSessionAsync { }
 
-protocol AuthorizationDelegate {
+protocol AuthorizationDelegate: AnyObject {
     func getBasicAuth() throws -> String
 }
 
@@ -19,7 +19,7 @@ final class APIClient {
     let hostname: String
     let urlSession: URLSessionAsync
     let decoder: JSONDecoder
-    var authorizationDelegate: AuthorizationDelegate?
+    weak var authorizationDelegate: AuthorizationDelegate?
     
     init(hostname: String, urlSession: URLSessionAsync, decoder: JSONDecoder = .init())
     {
