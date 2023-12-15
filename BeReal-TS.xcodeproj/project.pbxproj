@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3761AA642B2BE03E00E3CD6E /* BeReal_TSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AA632B2BE03E00E3CD6E /* BeReal_TSApp.swift */; };
+		3761AA642B2BE03E00E3CD6E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AA632B2BE03E00E3CD6E /* App.swift */; };
 		3761AA662B2BE03E00E3CD6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AA652B2BE03E00E3CD6E /* ContentView.swift */; };
 		3761AA682B2BE03F00E3CD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3761AA672B2BE03F00E3CD6E /* Assets.xcassets */; };
 		3761AA6B2B2BE03F00E3CD6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3761AA6A2B2BE03F00E3CD6E /* Preview Assets.xcassets */; };
-		3761AA752B2BE03F00E3CD6E /* BeReal_TSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AA742B2BE03F00E3CD6E /* BeReal_TSTests.swift */; };
-		3761AA7F2B2BE03F00E3CD6E /* BeReal_TSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AA7E2B2BE03F00E3CD6E /* BeReal_TSUITests.swift */; };
-		3761AA812B2BE03F00E3CD6E /* BeReal_TSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AA802B2BE03F00E3CD6E /* BeReal_TSUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,26 +21,15 @@
 			remoteGlobalIDString = 3761AA5F2B2BE03E00E3CD6E;
 			remoteInfo = "BeReal-TS";
 		};
-		3761AA7B2B2BE03F00E3CD6E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3761AA582B2BE03E00E3CD6E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3761AA5F2B2BE03E00E3CD6E;
-			remoteInfo = "BeReal-TS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3761AA602B2BE03E00E3CD6E /* BeReal-TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeReal-TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3761AA632B2BE03E00E3CD6E /* BeReal_TSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeReal_TSApp.swift; sourceTree = "<group>"; };
+		3761AA632B2BE03E00E3CD6E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		3761AA652B2BE03E00E3CD6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3761AA672B2BE03F00E3CD6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3761AA6A2B2BE03F00E3CD6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3761AA702B2BE03F00E3CD6E /* BeReal-TSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeReal-TSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3761AA742B2BE03F00E3CD6E /* BeReal_TSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeReal_TSTests.swift; sourceTree = "<group>"; };
-		3761AA7A2B2BE03F00E3CD6E /* BeReal-TSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeReal-TSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3761AA7E2B2BE03F00E3CD6E /* BeReal_TSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeReal_TSUITests.swift; sourceTree = "<group>"; };
-		3761AA802B2BE03F00E3CD6E /* BeReal_TSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeReal_TSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +47,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3761AA772B2BE03F00E3CD6E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +55,6 @@
 			children = (
 				3761AA622B2BE03E00E3CD6E /* BeReal-TS */,
 				3761AA732B2BE03F00E3CD6E /* BeReal-TSTests */,
-				3761AA7D2B2BE03F00E3CD6E /* BeReal-TSUITests */,
 				3761AA612B2BE03E00E3CD6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +64,6 @@
 			children = (
 				3761AA602B2BE03E00E3CD6E /* BeReal-TS.app */,
 				3761AA702B2BE03F00E3CD6E /* BeReal-TSTests.xctest */,
-				3761AA7A2B2BE03F00E3CD6E /* BeReal-TSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,7 +71,7 @@
 		3761AA622B2BE03E00E3CD6E /* BeReal-TS */ = {
 			isa = PBXGroup;
 			children = (
-				3761AA632B2BE03E00E3CD6E /* BeReal_TSApp.swift */,
+				3761AA632B2BE03E00E3CD6E /* App.swift */,
 				3761AA652B2BE03E00E3CD6E /* ContentView.swift */,
 				3761AA672B2BE03F00E3CD6E /* Assets.xcassets */,
 				3761AA692B2BE03F00E3CD6E /* Preview Content */,
@@ -113,18 +90,8 @@
 		3761AA732B2BE03F00E3CD6E /* BeReal-TSTests */ = {
 			isa = PBXGroup;
 			children = (
-				3761AA742B2BE03F00E3CD6E /* BeReal_TSTests.swift */,
 			);
 			path = "BeReal-TSTests";
-			sourceTree = "<group>";
-		};
-		3761AA7D2B2BE03F00E3CD6E /* BeReal-TSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3761AA7E2B2BE03F00E3CD6E /* BeReal_TSUITests.swift */,
-				3761AA802B2BE03F00E3CD6E /* BeReal_TSUITestsLaunchTests.swift */,
-			);
-			path = "BeReal-TSUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +132,6 @@
 			productReference = 3761AA702B2BE03F00E3CD6E /* BeReal-TSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3761AA792B2BE03F00E3CD6E /* BeReal-TSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3761AA8A2B2BE03F00E3CD6E /* Build configuration list for PBXNativeTarget "BeReal-TSUITests" */;
-			buildPhases = (
-				3761AA762B2BE03F00E3CD6E /* Sources */,
-				3761AA772B2BE03F00E3CD6E /* Frameworks */,
-				3761AA782B2BE03F00E3CD6E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3761AA7C2B2BE03F00E3CD6E /* PBXTargetDependency */,
-			);
-			name = "BeReal-TSUITests";
-			productName = "BeReal-TSUITests";
-			productReference = 3761AA7A2B2BE03F00E3CD6E /* BeReal-TSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,15 +141,12 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					3761AA5F2B2BE03E00E3CD6E = {
 						CreatedOnToolsVersion = 15.1;
 					};
 					3761AA6F2B2BE03F00E3CD6E = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 3761AA5F2B2BE03E00E3CD6E;
-					};
-					3761AA792B2BE03F00E3CD6E = {
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = 3761AA5F2B2BE03E00E3CD6E;
 					};
@@ -221,7 +167,6 @@
 			targets = (
 				3761AA5F2B2BE03E00E3CD6E /* BeReal-TS */,
 				3761AA6F2B2BE03F00E3CD6E /* BeReal-TSTests */,
-				3761AA792B2BE03F00E3CD6E /* BeReal-TSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,13 +188,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3761AA782B2BE03F00E3CD6E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,7 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3761AA662B2BE03E00E3CD6E /* ContentView.swift in Sources */,
-				3761AA642B2BE03E00E3CD6E /* BeReal_TSApp.swift in Sources */,
+				3761AA642B2BE03E00E3CD6E /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,16 +204,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3761AA752B2BE03F00E3CD6E /* BeReal_TSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3761AA762B2BE03F00E3CD6E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3761AA812B2BE03F00E3CD6E /* BeReal_TSUITestsLaunchTests.swift in Sources */,
-				3761AA7F2B2BE03F00E3CD6E /* BeReal_TSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +214,6 @@
 			isa = PBXTargetDependency;
 			target = 3761AA5F2B2BE03E00E3CD6E /* BeReal-TS */;
 			targetProxy = 3761AA712B2BE03F00E3CD6E /* PBXContainerItemProxy */;
-		};
-		3761AA7C2B2BE03F00E3CD6E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3761AA5F2B2BE03E00E3CD6E /* BeReal-TS */;
-			targetProxy = 3761AA7B2B2BE03F00E3CD6E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -347,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -436,9 +359,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "pizza.evan.BeReal-TS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -464,9 +390,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "pizza.evan.BeReal-TS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -508,40 +437,6 @@
 			};
 			name = Release;
 		};
-		3761AA8B2B2BE03F00E3CD6E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pizza.evan.BeReal-TSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "BeReal-TS";
-			};
-			name = Debug;
-		};
-		3761AA8C2B2BE03F00E3CD6E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pizza.evan.BeReal-TSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "BeReal-TS";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,15 +463,6 @@
 			buildConfigurations = (
 				3761AA882B2BE03F00E3CD6E /* Debug */,
 				3761AA892B2BE03F00E3CD6E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3761AA8A2B2BE03F00E3CD6E /* Build configuration list for PBXNativeTarget "BeReal-TSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3761AA8B2B2BE03F00E3CD6E /* Debug */,
-				3761AA8C2B2BE03F00E3CD6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,7 +1,4 @@
 //
-//  ContentView.swift
-//  BeReal-TS
-//
 //  Created by Evan DeLaney on 12/14/23.
 //
 
