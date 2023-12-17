@@ -54,6 +54,8 @@ final class ItemsResponseTests: XCTestCase {
         let response = try decoder.decode(ItemsResponse.self, from: json)
         
         XCTAssertEqual(response.items.count, 3)
+        XCTAssertEqual(response.files.count, 2)
+        XCTAssertEqual(response.folders.count, 1)
     }
     
     func testFoldersFiltersItems() throws

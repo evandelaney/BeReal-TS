@@ -10,6 +10,8 @@
 		3734CA1A2B2F87310076770B /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA192B2F87310076770B /* AppLauncher.swift */; };
 		3734CA1C2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA1B2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift */; };
 		3734CA1E2B2F91340076770B /* AuthenticatedNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */; };
+		3734CA242B2FA4E40076770B /* Date+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA232B2FA4E40076770B /* Date+UnitTests.swift */; };
+		3734CA262B2FA5180076770B /* DateFormatter+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA252B2FA5180076770B /* DateFormatter+UnitTests.swift */; };
 		37806CC52B2BF7DD00A580BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC42B2BF7DD00A580BB /* Assets.xcassets */; };
 		37806CC82B2BF7DD00A580BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */; };
 		37806CEB2B2BF88300A580BB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CEA2B2BF88300A580BB /* App.swift */; };
@@ -62,6 +64,8 @@
 		3734CA192B2F87310076770B /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
 		3734CA1B2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserViewModelTests.swift; sourceTree = "<group>"; };
 		3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedNavigationStack.swift; sourceTree = "<group>"; };
+		3734CA232B2FA4E40076770B /* Date+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+UnitTests.swift"; sourceTree = "<group>"; };
+		3734CA252B2FA5180076770B /* DateFormatter+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+UnitTests.swift"; sourceTree = "<group>"; };
 		37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeReal-TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37806CC42B2BF7DD00A580BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 		37806D002B2C055500A580BB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3734CA232B2FA4E40076770B /* Date+UnitTests.swift */,
+				3734CA252B2FA5180076770B /* DateFormatter+UnitTests.swift */,
 				37806D012B2C056300A580BB /* File+UnitTest.swift */,
 				37806D032B2C058500A580BB /* Folder+UnitTest.swift */,
 				37806D2C2B2F3C3800A580BB /* User+UnitTest.swift */,
@@ -399,7 +405,9 @@
 				37806D082B2C081500A580BB /* UserTests.swift in Sources */,
 				37806CED2B2BF89400A580BB /* ItemsResponseTests.swift in Sources */,
 				37806D022B2C056300A580BB /* File+UnitTest.swift in Sources */,
+				3734CA242B2FA4E40076770B /* Date+UnitTests.swift in Sources */,
 				37806D142B2C1E4B00A580BB /* APIClientTests.swift in Sources */,
+				3734CA262B2FA5180076770B /* DateFormatter+UnitTests.swift in Sources */,
 				3734CA1C2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift in Sources */,
 				37806CFC2B2BFE7600A580BB /* FolderTests.swift in Sources */,
 				37806D272B2E994400A580BB /* AuthenticationStateTests.swift in Sources */,

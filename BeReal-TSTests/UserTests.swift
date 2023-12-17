@@ -40,7 +40,6 @@ final class UserTests: XCTestCase {
             XCTAssertEqual(user.firstName, "Evan")
             XCTAssertEqual(user.lastName, "DeLaney")
             XCTAssertEqual(user.rootItem.identifier, "4b8e41fd4a6a89712f15bbf102421b9338cfab11")
-            XCTAssertEqual(user.rootItem.isDirectory, true)
             XCTAssertEqual(user.rootItem.name, "dossierTest")
         }
 }

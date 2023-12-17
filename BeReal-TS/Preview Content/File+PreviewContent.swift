@@ -9,7 +9,6 @@ extension File {
     static let preview1 = File(
         identifier: "FILE-PREVIEW-1",
         parent: nil,
-        isDirectory: false,
         modified: Date(),
         name: "Preview File #1",
         size: 2048,
@@ -19,7 +18,6 @@ extension File {
     static let preview2 = File(
         identifier: "FILE-PREVIEW-2",
         parent: nil,
-        isDirectory: false,
         modified: Date(),
         name: "Preview File #2",
         size: 1024,

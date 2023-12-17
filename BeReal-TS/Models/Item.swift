@@ -16,8 +16,6 @@ protocol Item: Decodable, Hashable, ItemCellDisplayable {
     
     var name: String { get }
     
-    var isDirectory: Bool { get }
-    
     var modified: Date { get }
 }
 

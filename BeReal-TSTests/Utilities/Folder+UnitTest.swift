@@ -7,13 +7,12 @@ import Foundation
 
 extension Folder {
     
-    static func make(identifier: String) -> Folder
+    static func make(identifier: String, modified: Date = .now) -> Folder
     {
         Folder(
             identifier: identifier,
             parent: nil,
-            isDirectory: true,
-            modified: Date(),
+            modified: modified,
             name: "Test Folder"
         )
     }
