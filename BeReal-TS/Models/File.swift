@@ -38,3 +38,11 @@ extension File: Equatable {
         lhs.identifier == rhs.identifier
     }
 }
+
+extension File: ItemCellDisplayable {
+    
+    var iconName: String {
+        "doc"
+    }
+}
+

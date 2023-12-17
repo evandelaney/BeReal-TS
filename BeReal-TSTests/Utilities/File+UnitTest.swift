@@ -7,13 +7,13 @@ import Foundation
 
 extension File {
     
-    static func make(identifier: String) -> File
+    static func make(identifier: String, modified: Date = .now) -> File
     {
         File(
             identifier: identifier,
             parent: nil,
             isDirectory: false,
-            modified: Date(),
+            modified: modified,
             name: "Test File",
             size: 0,
             contentType: nil

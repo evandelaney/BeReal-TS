@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3734CA1A2B2F87310076770B /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA192B2F87310076770B /* AppLauncher.swift */; };
-		37806CC32B2BF7DC00A580BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CC22B2BF7DC00A580BB /* ContentView.swift */; };
+		3734CA1C2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA1B2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift */; };
 		37806CC52B2BF7DD00A580BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC42B2BF7DD00A580BB /* Assets.xcassets */; };
 		37806CC82B2BF7DD00A580BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */; };
 		37806CEB2B2BF88300A580BB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CEA2B2BF88300A580BB /* App.swift */; };
@@ -40,8 +40,11 @@
 		37806D292B2EA4B800A580BB /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D282B2EA4B800A580BB /* AuthenticationState.swift */; };
 		37806D2B2B2F383B00A580BB /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */; };
 		37806D2D2B2F3C3800A580BB /* User+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D2C2B2F3C3800A580BB /* User+UnitTest.swift */; };
+		37806D2F2B2F498D00A580BB /* AuthenticatedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D2E2B2F498D00A580BB /* AuthenticatedUserView.swift */; };
 		37806D312B2F54C100A580BB /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D302B2F54C100A580BB /* ViewModelFactory.swift */; };
+		37806D332B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D322B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift */; };
 		37806D352B2F601200A580BB /* User+PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D342B2F601200A580BB /* User+PreviewContent.swift */; };
+		37806D372B2F607B00A580BB /* AuthenticatedUserViewModel+PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D362B2F607B00A580BB /* AuthenticatedUserViewModel+PreviewContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +59,8 @@
 
 /* Begin PBXFileReference section */
 		3734CA192B2F87310076770B /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
+		3734CA1B2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserViewModelTests.swift; sourceTree = "<group>"; };
 		37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeReal-TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37806CC22B2BF7DC00A580BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		37806CC42B2BF7DD00A580BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37806CCD2B2BF7DD00A580BB /* BeReal-TSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeReal-TSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,8 +94,11 @@
 		37806D282B2EA4B800A580BB /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
 		37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
 		37806D2C2B2F3C3800A580BB /* User+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+UnitTest.swift"; sourceTree = "<group>"; };
+		37806D2E2B2F498D00A580BB /* AuthenticatedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserView.swift; sourceTree = "<group>"; };
 		37806D302B2F54C100A580BB /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		37806D322B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserViewModel.swift; sourceTree = "<group>"; };
 		37806D342B2F601200A580BB /* User+PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+PreviewContent.swift"; sourceTree = "<group>"; };
+		37806D362B2F607B00A580BB /* AuthenticatedUserViewModel+PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticatedUserViewModel+PreviewContent.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */,
+				37806D362B2F607B00A580BB /* AuthenticatedUserViewModel+PreviewContent.swift */,
 				37806D182B2C26F400A580BB /* File+PreviewContent.swift */,
 				37806D1C2B2C2AB600A580BB /* Folder+PreviewContent.swift */,
 				37806D342B2F601200A580BB /* User+PreviewContent.swift */,
@@ -166,6 +173,7 @@
 			children = (
 				37806D002B2C055500A580BB /* Utilities */,
 				37806D132B2C1E4B00A580BB /* APIClientTests.swift */,
+				3734CA1B2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift */,
 				37806D262B2E994400A580BB /* AuthenticationStateTests.swift */,
 				37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */,
 				37806CF92B2BFE6B00A580BB /* FileTests.swift */,
@@ -229,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				37806D1E2B2C2E5600A580BB /* AuthContainerView.swift */,
-				37806CC22B2BF7DC00A580BB /* ContentView.swift */,
+				37806D2E2B2F498D00A580BB /* AuthenticatedUserView.swift */,
 				37806D1A2B2C289500A580BB /* ItemCell.swift */,
 				37806D162B2C25C300A580BB /* ItemsView.swift */,
 				37806D202B2C2F3E00A580BB /* LoginView.swift */,
@@ -240,6 +248,7 @@
 		37806D222B2C2FB100A580BB /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				37806D322B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift */,
 				37806D232B2C2FBD00A580BB /* AuthenticationViewModel.swift */,
 				37806D302B2F54C100A580BB /* ViewModelFactory.swift */,
 			);
@@ -352,19 +361,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37806D372B2F607B00A580BB /* AuthenticatedUserViewModel+PreviewContent.swift in Sources */,
 				37806D292B2EA4B800A580BB /* AuthenticationState.swift in Sources */,
 				37806CF62B2BF8F000A580BB /* Item.swift in Sources */,
 				37806D0A2B2C09E000A580BB /* DateDecodingStrategy+BeReal.swift in Sources */,
 				37806D1F2B2C2E5600A580BB /* AuthContainerView.swift in Sources */,
-				37806CC32B2BF7DC00A580BB /* ContentView.swift in Sources */,
 				37806D0D2B2C0CFB00A580BB /* APIClient.swift in Sources */,
 				37806D312B2F54C100A580BB /* ViewModelFactory.swift in Sources */,
 				37806D1B2B2C289500A580BB /* ItemCell.swift in Sources */,
+				37806D2F2B2F498D00A580BB /* AuthenticatedUserView.swift in Sources */,
 				37806CF52B2BF8F000A580BB /* File.swift in Sources */,
 				3734CA1A2B2F87310076770B /* AppLauncher.swift in Sources */,
 				37806D192B2C26F400A580BB /* File+PreviewContent.swift in Sources */,
 				37806D352B2F601200A580BB /* User+PreviewContent.swift in Sources */,
 				37806D242B2C2FBD00A580BB /* AuthenticationViewModel.swift in Sources */,
+				37806D332B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift in Sources */,
 				37806CEB2B2BF88300A580BB /* App.swift in Sources */,
 				37806D062B2C070E00A580BB /* User.swift in Sources */,
 				37806D212B2C2F3E00A580BB /* LoginView.swift in Sources */,
@@ -385,6 +396,7 @@
 				37806CED2B2BF89400A580BB /* ItemsResponseTests.swift in Sources */,
 				37806D022B2C056300A580BB /* File+UnitTest.swift in Sources */,
 				37806D142B2C1E4B00A580BB /* APIClientTests.swift in Sources */,
+				3734CA1C2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift in Sources */,
 				37806CFC2B2BFE7600A580BB /* FolderTests.swift in Sources */,
 				37806D272B2E994400A580BB /* AuthenticationStateTests.swift in Sources */,
 				37806D2B2B2F383B00A580BB /* AuthenticationViewModelTests.swift in Sources */,

@@ -17,17 +17,9 @@ struct AuthContainerView: View {
     }
     
     var body: some View {
-        if let user = viewModel.authenticatedUser {
+        if let viewModel = factory.makeAuthenticatedUserViewModel(from: viewModel) {
             NavigationStack {
-                ItemsView(items: [ user.rootItem ])
-                    .navigationTitle(user.firstName)
-                    .toolbar(content: {
-                        Button("Log Out", systemImage: "door.left.hand.open") {
-                            Task {
-                                await viewModel.logOut()
-                            }
-                        }
-                    })
+                AuthenticatedUserView(viewModel: viewModel)
             }
         }
         else {

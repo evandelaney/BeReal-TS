@@ -17,7 +17,8 @@ final class FolderTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testDecodeExampleJSON() throws {
+    func testDecodeExampleJSON() throws
+    {
         let json = """
                    {
                        "id": "a8537d631d21a8b7fdbbcd11e4d2e5d09d61971d",
@@ -36,5 +37,12 @@ final class FolderTests: XCTestCase {
         XCTAssertEqual(file.parent?.rawValue, "ec94bd0365b352832710f171bd8463b6d9caf6e7")
         XCTAssertEqual(file.isDirectory, true)
         XCTAssertEqual(file.name, "Documents")
+    }
+    
+    func testExepctedIconName()
+    {
+        let folder = Folder.make(identifier: "UNIT TEST")
+        
+        XCTAssertEqual(folder.iconName, "folder")
     }
 }

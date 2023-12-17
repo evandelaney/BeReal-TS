@@ -9,6 +9,15 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:BeReal-TS.xcodeproj",
+          "identifier" : "37806CBC2B2BF7DC00A580BB",
+          "name" : "BeReal-TS"
+        }
+      ]
+    },
     "targetForVariableExpansion" : {
       "containerPath" : "container:BeReal-TS.xcodeproj",
       "identifier" : "37806CBC2B2BF7DC00A580BB",
