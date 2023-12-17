@@ -61,7 +61,7 @@ final class AuthenticationViewModel {
         return nil
     }
     
-    let authentication: AuthenticationCredentialStore
+    let credentialStore: AuthenticationCredentialStore
     
     let client: AuthenticationClient
     
@@ -69,9 +69,9 @@ final class AuthenticationViewModel {
     
     init(authentication: AuthenticationCredentialStore, client: AuthenticationClient)
     {
-        self.authentication = authentication
+        self.credentialStore = authentication
         self.client = client
-        self.client.authorizationDelegate = self.authentication
+        self.client.authorizationDelegate = self.credentialStore
         self.stateMachine = AuthenticationState(initialState: .unauthenticated)
         self.state = .unauthenticated
         
@@ -87,15 +87,15 @@ final class AuthenticationViewModel {
             return
         }
         
-        authentication.username = username
-        authentication.password = password
+        credentialStore.username = username
+        credentialStore.password = password
         
         await authenticateUser()
     }
     
     func authenticateUser() async
     {
-        guard authentication.password != nil && authentication.username != nil else { return }
+        guard credentialStore.password != nil && credentialStore.username != nil else { return }
         
         do {
             await stateMachineTransition(to: .loading)
@@ -103,14 +103,14 @@ final class AuthenticationViewModel {
             await stateMachineTransition(to: .authenticated(user))
         }
         catch {
-            authentication.clear()
+            credentialStore.clear()
             await stateMachineTransition(to: .error(error))
         }
     }
     
     func logOut() async
     {
-        authentication.clear()
+        credentialStore.clear()
         await stateMachineTransition(to: .unauthenticated)
     }
     
