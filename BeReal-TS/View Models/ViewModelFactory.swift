@@ -5,7 +5,7 @@
 import Foundation
 
 final class ViewModelFactory {
-        
+    
     let client: APIClient
     let authentication: Authentication
     
@@ -28,6 +28,11 @@ final class ViewModelFactory {
             user: user,
             logOut: viewModel.logOut
         )
+    }
+    
+    func makeFolderViewModel(from folder: Folder) -> FolderViewModel
+    {
+        return FolderViewModel(client: client, root: folder)
     }
 }
 

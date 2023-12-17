@@ -18,7 +18,7 @@ struct AuthContainerView: View {
     
     var body: some View {
         if let viewModel = factory.makeAuthenticatedUserViewModel(from: viewModel) {
-            AuthenticatedNavigationStack {
+            AuthenticatedNavigationStack(factory: factory) {
                 AuthenticatedUserView(viewModel: viewModel)
             }
         }

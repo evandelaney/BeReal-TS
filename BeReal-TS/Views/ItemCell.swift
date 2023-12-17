@@ -22,8 +22,8 @@ struct ItemCell: View {
                 Text(item.localizedHeadline)
                     .font(.headline)
                 Text(item.localizedSubheadline(with: .localizedShort))
+                    .foregroundStyle(.secondary)
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
             }
         }
     }

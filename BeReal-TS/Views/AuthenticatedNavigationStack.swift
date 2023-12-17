@@ -8,13 +8,17 @@ struct AuthenticatedNavigationStack<Content: View>: View {
     
     var contentView: () -> Content
     
+    let factory: ViewModelFactory
+    
     @State private var path = NavigationPath()
     
     init(
-        @ViewBuilder contentView: @escaping () -> Content,
-        path: NavigationPath = .init()
+        factory: ViewModelFactory,
+        path: NavigationPath = .init(),
+        @ViewBuilder contentView: @escaping () -> Content
     ) {
         self.contentView = contentView
+        self.factory = factory
         self.path = path
     }
     
@@ -22,19 +26,14 @@ struct AuthenticatedNavigationStack<Content: View>: View {
         NavigationStack(path: $path) {
             contentView()
                 .navigationDestination(for: Folder.self) { folder in
-                    FolderView()
+                    FolderView(viewModel:
+                                factory.makeFolderViewModel(from: folder)
+                    )
                 }
                 .navigationDestination(for: File.self) { file in
                     FileView()
                 }
         }
-    }
-}
-
-struct FolderView: View {
-    
-    var body: some View {
-        Text("Folder View")
     }
 }
 
