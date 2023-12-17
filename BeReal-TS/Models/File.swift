@@ -39,10 +39,24 @@ extension File: Equatable {
     }
 }
 
+extension File: Hashable {
+    
+    func hash(into hasher: inout Hasher)
+    {
+        hasher.combine(identifier)
+    }
+}
+
 extension File: ItemCellDisplayable {
     
     var iconName: String {
         "doc"
+    }
+    
+    func localizedSubheadline(
+        with dateFormatter: DateFormatter
+    ) -> String {
+        dateFormatter.string(from: modified)
     }
 }
 

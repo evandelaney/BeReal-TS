@@ -33,9 +33,23 @@ extension Folder: Equatable {
     }
 }
 
+extension Folder: Hashable {
+    
+    func hash(into hasher: inout Hasher)
+    {
+        hasher.combine(identifier)
+    }
+}
+
 extension Folder: ItemCellDisplayable {
     
     var iconName: String {
         "folder"
+    }
+    
+    func localizedSubheadline(
+        with dateFormatter: DateFormatter
+    ) -> String {
+        dateFormatter.string(from: modified)
     }
 }

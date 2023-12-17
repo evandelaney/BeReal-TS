@@ -54,14 +54,14 @@ final class APIClient {
         )
     }
     
-    func getItems(at folder: Folder) async throws -> [ Item ]
+    func getItems(at folder: Folder) async throws -> [ any Item ]
     {
         try (decode(from:
                         try await makeRequest(with: "items/\(folder.identifier)")
                    ) as ItemsResponse).items
     }
     
-    func delete(item: Item) async throws -> Bool
+    func delete(item: any Item) async throws -> Bool
     {
         let (_, response) = try await makeRequest(with: "items/\(item.identifier)", httpMethod: "DELETE")
         guard let response = response as? HTTPURLResponse else { return false }

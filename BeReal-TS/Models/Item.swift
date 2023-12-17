@@ -8,7 +8,7 @@ struct FolderIdentifier: Decodable, RawRepresentable, Equatable {
     let rawValue: String
 }
 
-protocol Item: Decodable, ItemCellDisplayable {
+protocol Item: Decodable, Hashable, ItemCellDisplayable {
     
     var identifier: String { get }
     
@@ -25,11 +25,5 @@ extension Item {
     
     var localizedHeadline: String {
         name
-    }
-    
-    func localizedSubheadline(
-        with dateFormatter: DateFormatter
-    ) -> String {
-        dateFormatter.string(from: modified)
-    }
+    }    
 }
