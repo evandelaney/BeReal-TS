@@ -33,10 +33,3 @@ struct AuthContainerView: View {
         }
     }
 }
-
-#Preview {
-    let auth = Authentication()
-    let client = APIClient(hostname: "", urlSession: URLSession.shared)
-    
-    return AuthContainerView(client: client, authentication: auth)
-}

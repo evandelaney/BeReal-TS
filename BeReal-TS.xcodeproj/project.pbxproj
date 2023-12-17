@@ -39,6 +39,7 @@
 		37806D292B2EA4B800A580BB /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D282B2EA4B800A580BB /* AuthenticationState.swift */; };
 		37806D2B2B2F383B00A580BB /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */; };
 		37806D2D2B2F3C3800A580BB /* User+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D2C2B2F3C3800A580BB /* User+UnitTest.swift */; };
+		37806D352B2F601200A580BB /* User+PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D342B2F601200A580BB /* User+PreviewContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		37806D282B2EA4B800A580BB /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
 		37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
 		37806D2C2B2F3C3800A580BB /* User+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+UnitTest.swift"; sourceTree = "<group>"; };
+		37806D342B2F601200A580BB /* User+PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+PreviewContent.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */,
 				37806D182B2C26F400A580BB /* File+PreviewContent.swift */,
 				37806D1C2B2C2AB600A580BB /* Folder+PreviewContent.swift */,
+				37806D342B2F601200A580BB /* User+PreviewContent.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -157,13 +160,13 @@
 			isa = PBXGroup;
 			children = (
 				37806D002B2C055500A580BB /* Utilities */,
-				37806CEC2B2BF89400A580BB /* ItemsResponseTests.swift */,
-				37806CF92B2BFE6B00A580BB /* FileTests.swift */,
-				37806CFB2B2BFE7600A580BB /* FolderTests.swift */,
-				37806D072B2C081500A580BB /* UserTests.swift */,
 				37806D132B2C1E4B00A580BB /* APIClientTests.swift */,
 				37806D262B2E994400A580BB /* AuthenticationStateTests.swift */,
 				37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */,
+				37806CF92B2BFE6B00A580BB /* FileTests.swift */,
+				37806CFB2B2BFE7600A580BB /* FolderTests.swift */,
+				37806CEC2B2BF89400A580BB /* ItemsResponseTests.swift */,
+				37806D072B2C081500A580BB /* UserTests.swift */,
 			);
 			path = "BeReal-TSTests";
 			sourceTree = "<group>";
@@ -171,12 +174,12 @@
 		37806CEE2B2BF8B500A580BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				37806D282B2EA4B800A580BB /* AuthenticationState.swift */,
 				37806CF22B2BF8F000A580BB /* File.swift */,
 				37806CF42B2BF8F000A580BB /* Folder.swift */,
 				37806CF32B2BF8F000A580BB /* Item.swift */,
 				37806D052B2C070E00A580BB /* User.swift */,
 				37806CEF2B2BF8BE00A580BB /* API Responses */,
-				37806D282B2EA4B800A580BB /* AuthenticationState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,8 +195,8 @@
 		37806CFD2B2C024B00A580BB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				37806CFE2B2C025800A580BB /* DateFormatter+BeReal.swift */,
 				37806D092B2C09E000A580BB /* DateDecodingStrategy+BeReal.swift */,
+				37806CFE2B2C025800A580BB /* DateFormatter+BeReal.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,10 +223,10 @@
 		37806D152B2C25A200A580BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				37806CC22B2BF7DC00A580BB /* ContentView.swift */,
-				37806D162B2C25C300A580BB /* ItemsView.swift */,
-				37806D1A2B2C289500A580BB /* ItemCell.swift */,
 				37806D1E2B2C2E5600A580BB /* AuthContainerView.swift */,
+				37806CC22B2BF7DC00A580BB /* ContentView.swift */,
+				37806D1A2B2C289500A580BB /* ItemCell.swift */,
+				37806D162B2C25C300A580BB /* ItemsView.swift */,
 				37806D202B2C2F3E00A580BB /* LoginView.swift */,
 			);
 			path = Views;
@@ -352,6 +355,7 @@
 				37806D1B2B2C289500A580BB /* ItemCell.swift in Sources */,
 				37806CF52B2BF8F000A580BB /* File.swift in Sources */,
 				37806D192B2C26F400A580BB /* File+PreviewContent.swift in Sources */,
+				37806D352B2F601200A580BB /* User+PreviewContent.swift in Sources */,
 				37806D242B2C2FBD00A580BB /* AuthenticationViewModel.swift in Sources */,
 				37806CEB2B2BF88300A580BB /* App.swift in Sources */,
 				37806D062B2C070E00A580BB /* User.swift in Sources */,
