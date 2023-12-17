@@ -8,13 +8,15 @@ struct AuthContainerView: View {
     
     @State var viewModel: AuthenticationViewModel
     
-    init(client: APIClient, authentication: Authentication)
+    let factory: ViewModelFactory
+    
+    init(factory: ViewModelFactory = globalViewModelFactory)
     {
-        _viewModel = State(wrappedValue: AuthenticationViewModel(authentication: authentication, client: client))
+        self.factory = factory
+        viewModel = self.factory.makeAuthenticationViewModel()
     }
     
     var body: some View {
-        
         if let user = viewModel.authenticatedUser {
             NavigationStack {
                 ItemsView(items: [ user.rootItem ])
