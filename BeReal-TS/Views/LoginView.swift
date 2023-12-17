@@ -6,7 +6,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    var viewModel: AuthViewModel
+    var viewModel: AuthenticationViewModel
     
     @State private var username: String = ""
     @State private var password: String = ""
@@ -44,7 +44,7 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(viewModel: AuthViewModel(
+    LoginView(viewModel: AuthenticationViewModel(
         authentication: Authentication(),
         client: APIClient(hostname: "preview", urlSession: URLSession.shared)
     ))

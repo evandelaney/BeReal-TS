@@ -34,9 +34,11 @@
 		37806D1D2B2C2AB600A580BB /* Folder+PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D1C2B2C2AB600A580BB /* Folder+PreviewContent.swift */; };
 		37806D1F2B2C2E5600A580BB /* AuthContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D1E2B2C2E5600A580BB /* AuthContainerView.swift */; };
 		37806D212B2C2F3E00A580BB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D202B2C2F3E00A580BB /* LoginView.swift */; };
-		37806D242B2C2FBD00A580BB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D232B2C2FBD00A580BB /* AuthViewModel.swift */; };
+		37806D242B2C2FBD00A580BB /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D232B2C2FBD00A580BB /* AuthenticationViewModel.swift */; };
 		37806D272B2E994400A580BB /* AuthenticationStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D262B2E994400A580BB /* AuthenticationStateTests.swift */; };
 		37806D292B2EA4B800A580BB /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D282B2EA4B800A580BB /* AuthenticationState.swift */; };
+		37806D2B2B2F383B00A580BB /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */; };
+		37806D2D2B2F3C3800A580BB /* User+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D2C2B2F3C3800A580BB /* User+UnitTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,10 +81,12 @@
 		37806D1C2B2C2AB600A580BB /* Folder+PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+PreviewContent.swift"; sourceTree = "<group>"; };
 		37806D1E2B2C2E5600A580BB /* AuthContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthContainerView.swift; sourceTree = "<group>"; };
 		37806D202B2C2F3E00A580BB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		37806D232B2C2FBD00A580BB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		37806D232B2C2FBD00A580BB /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		37806D252B2C3ACA00A580BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		37806D262B2E994400A580BB /* AuthenticationStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationStateTests.swift; sourceTree = "<group>"; };
 		37806D282B2EA4B800A580BB /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
+		37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
+		37806D2C2B2F3C3800A580BB /* User+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+UnitTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 				37806D072B2C081500A580BB /* UserTests.swift */,
 				37806D132B2C1E4B00A580BB /* APIClientTests.swift */,
 				37806D262B2E994400A580BB /* AuthenticationStateTests.swift */,
+				37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */,
 			);
 			path = "BeReal-TSTests";
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			children = (
 				37806D012B2C056300A580BB /* File+UnitTest.swift */,
 				37806D032B2C058500A580BB /* Folder+UnitTest.swift */,
+				37806D2C2B2F3C3800A580BB /* User+UnitTest.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -226,7 +232,7 @@
 		37806D222B2C2FB100A580BB /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				37806D232B2C2FBD00A580BB /* AuthViewModel.swift */,
+				37806D232B2C2FBD00A580BB /* AuthenticationViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -346,7 +352,7 @@
 				37806D1B2B2C289500A580BB /* ItemCell.swift in Sources */,
 				37806CF52B2BF8F000A580BB /* File.swift in Sources */,
 				37806D192B2C26F400A580BB /* File+PreviewContent.swift in Sources */,
-				37806D242B2C2FBD00A580BB /* AuthViewModel.swift in Sources */,
+				37806D242B2C2FBD00A580BB /* AuthenticationViewModel.swift in Sources */,
 				37806CEB2B2BF88300A580BB /* App.swift in Sources */,
 				37806D062B2C070E00A580BB /* User.swift in Sources */,
 				37806D212B2C2F3E00A580BB /* LoginView.swift in Sources */,
@@ -369,7 +375,9 @@
 				37806D142B2C1E4B00A580BB /* APIClientTests.swift in Sources */,
 				37806CFC2B2BFE7600A580BB /* FolderTests.swift in Sources */,
 				37806D272B2E994400A580BB /* AuthenticationStateTests.swift in Sources */,
+				37806D2B2B2F383B00A580BB /* AuthenticationViewModelTests.swift in Sources */,
 				37806CFA2B2BFE6B00A580BB /* FileTests.swift in Sources */,
+				37806D2D2B2F3C3800A580BB /* User+UnitTest.swift in Sources */,
 				37806D042B2C058500A580BB /* Folder+UnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
