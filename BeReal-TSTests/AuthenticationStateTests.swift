@@ -15,11 +15,7 @@ final class AuthenticationStateTests: XCTestCase {
         try super.setUpWithError()
         
         machine = AuthenticationState()
-        user = User(
-            firstName: "Evan",
-            lastName: "DeLaney",
-            rootItem: .make(identifier: "UNIT-TEST")
-        )
+        user = .make()
     }
     
     override func tearDownWithError() throws
@@ -66,6 +62,16 @@ final class AuthenticationStateTests: XCTestCase {
         XCTAssertEqual(state, .error(error))
     }
     
+    func testTransitionToErrorFromUnauthenticated() async throws
+    {
+        let error = NSError(domain: "UnitTest", code: 42)
+        
+        try await machine.transition(to: .error(error))
+        let state = await machine.state
+        
+        XCTAssertEqual(state, .error(error))
+    }
+    
     func testTransitionToUnauthenticatedFromAuthenticated() async throws
     {
         machine = AuthenticationState(initialState: .authenticated(user))
@@ -105,19 +111,6 @@ final class AuthenticationStateTests: XCTestCase {
     {
         machine = AuthenticationState(initialState: .authenticated(user))
         
-        do {
-            try await machine.transition(to: .error(NSError(domain: "UnitTest", code: 42)))
-        }
-        catch {
-            XCTAssertEqual(error as? AuthenticationState.Error, .invalidStateTransition)
-            return
-        }
-        
-        XCTFail()
-    }
-    
-    func testTransitionToErrorFromUnauthenticatedFails() async throws
-    {
         do {
             try await machine.transition(to: .error(NSError(domain: "UnitTest", code: 42)))
         }

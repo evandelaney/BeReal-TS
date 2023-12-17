@@ -6,34 +6,26 @@ import SwiftUI
 
 struct AuthContainerView: View {
     
-    @State var viewModel: AuthViewModel
+    @State var viewModel: AuthenticationViewModel
     
     init(client: APIClient, authentication: Authentication)
     {
-        _viewModel = State(wrappedValue: AuthViewModel(authentication: authentication, client: client))
+        _viewModel = State(wrappedValue: AuthenticationViewModel(authentication: authentication, client: client))
     }
     
     var body: some View {
-        if viewModel.isAuthenticated {
-            if let user = viewModel.authenticatedUser {
-                NavigationStack {
-                    ItemsView(items: [ user.rootItem ])
-                        .navigationTitle(user.firstName)
-                        .toolbar(content: {
-                            Button("Log Out", systemImage: "door.left.hand.open") {
-                                viewModel.logOut()
+        
+        if let user = viewModel.authenticatedUser {
+            NavigationStack {
+                ItemsView(items: [ user.rootItem ])
+                    .navigationTitle(user.firstName)
+                    .toolbar(content: {
+                        Button("Log Out", systemImage: "door.left.hand.open") {
+                            Task {
+                                await viewModel.logOut()
                             }
-                        })
-                }
-                
-            }
-            else {
-                ProgressView()
-                    .onAppear {
-                        Task {
-                            await viewModel.reloadUser()
                         }
-                    }
+                    })
             }
         }
         else {
