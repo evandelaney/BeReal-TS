@@ -54,7 +54,7 @@ final class AuthenticationStateTests: XCTestCase {
     func testTransitionToErrorFromLoading() async throws
     {
         machine = AuthenticationState(initialState: .loading)
-        let error = AuthenticationState.Error.invalidStateTransition
+        let error = NSError(domain: "UnitTest", code: 42)
         
         try await machine.transition(to: .error(error))
         let state = await machine.state
@@ -100,7 +100,7 @@ final class AuthenticationStateTests: XCTestCase {
             try await machine.transition(to: .loading)
         }
         catch {
-            XCTAssertEqual(error as? AuthenticationState.Error, .invalidStateTransition)
+            XCTAssertTrue(error is StateMachineError<AuthenticationState.State>)
             return
         }
         
@@ -115,7 +115,7 @@ final class AuthenticationStateTests: XCTestCase {
             try await machine.transition(to: .error(NSError(domain: "UnitTest", code: 42)))
         }
         catch {
-            XCTAssertEqual(error as? AuthenticationState.Error, .invalidStateTransition)
+            XCTAssertTrue(error is StateMachineError<AuthenticationState.State>)
             return
         }
         
