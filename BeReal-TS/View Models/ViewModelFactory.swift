@@ -19,5 +19,15 @@ final class ViewModelFactory {
     {
         AuthenticationViewModel(authentication: authentication, client: client)
     }
+    
+    func makeAuthenticatedUserViewModel(from viewModel: AuthenticationViewModel) -> AuthenticatedUserViewModel?
+    {
+        guard let user = viewModel.authenticatedUser else { return nil }
+        
+        return AuthenticatedUserViewModel(
+            user: user,
+            logOut: viewModel.logOut
+        )
+    }
 }
 

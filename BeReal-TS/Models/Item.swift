@@ -21,3 +21,15 @@ protocol Item: Decodable, ItemCellDisplayable {
     var modified: Date { get }
 }
 
+extension Item {
+    
+    var localizedHeadline: String {
+        name
+    }
+    
+    func localizedSubheadline(
+        with dateFormatter: DateFormatter
+    ) -> String {
+        dateFormatter.string(from: modified)
+    }
+}

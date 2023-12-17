@@ -32,3 +32,10 @@ extension Folder: Equatable {
         lhs.identifier == rhs.identifier
     }
 }
+
+extension Folder: ItemCellDisplayable {
+    
+    var iconName: String {
+        "folder"
+    }
+}

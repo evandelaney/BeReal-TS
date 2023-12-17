@@ -17,7 +17,8 @@ final class FileTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testDecodeExampleJSON() throws {
+    func testDecodeExampleJSON() throws
+    {
         let json = """
                    {
                      "contentType": "image/jpg",
@@ -40,5 +41,36 @@ final class FileTests: XCTestCase {
         XCTAssertEqual(file.name, "picture.jpg")
         XCTAssertEqual(file.size, 164568)
         XCTAssertEqual(file.contentType, "image/jpg")
+    }
+    
+    // Item Displayable
+    
+    func testExepctedIconName()
+    {
+        let file = File.make(identifier: "UNIT TEST")
+        
+        XCTAssertEqual(file.iconName, "doc")
+    }
+    
+    func testExpectedHeadline()
+    {
+        let file = File.make(identifier: "UNIT TEST")
+        
+        XCTAssertEqual(file.localizedHeadline, "Test File")
+    }
+    
+    func testExpectedSubheadline()
+    {
+        let date = Date(timeIntervalSince1970: 1318106700)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        formatter.locale = Locale(identifier: "en_US")
+        let file = File.make(identifier: "UNIT TEST", modified: date)
+        
+        XCTAssertEqual(
+            file.localizedSubheadline(with: formatter),
+            "10/8/11"
+        )
     }
 }
