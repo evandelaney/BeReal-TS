@@ -44,8 +44,10 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(viewModel: AuthenticationViewModel(
-        authentication: Authentication(),
-        client: APIClient(hostname: "preview", urlSession: URLSession.shared)
-    ))
+    LoginView(
+        viewModel: AuthenticationViewModel(
+            authentication: globalAuthentication,
+            client: globalClient
+        )
+    )
 }
