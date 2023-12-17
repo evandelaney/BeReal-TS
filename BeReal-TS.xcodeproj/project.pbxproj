@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3734CA1A2B2F87310076770B /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA192B2F87310076770B /* AppLauncher.swift */; };
 		3734CA1C2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA1B2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift */; };
+		3734CA1E2B2F91340076770B /* AuthenticatedNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */; };
 		37806CC52B2BF7DD00A580BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC42B2BF7DD00A580BB /* Assets.xcassets */; };
 		37806CC82B2BF7DD00A580BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */; };
 		37806CEB2B2BF88300A580BB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CEA2B2BF88300A580BB /* App.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		3734CA192B2F87310076770B /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
 		3734CA1B2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserViewModelTests.swift; sourceTree = "<group>"; };
+		3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedNavigationStack.swift; sourceTree = "<group>"; };
 		37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeReal-TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37806CC42B2BF7DD00A580BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				37806D1E2B2C2E5600A580BB /* AuthContainerView.swift */,
+				3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */,
 				37806D2E2B2F498D00A580BB /* AuthenticatedUserView.swift */,
 				37806D1A2B2C289500A580BB /* ItemCell.swift */,
 				37806D162B2C25C300A580BB /* ItemsView.swift */,
@@ -371,6 +374,7 @@
 				37806D1B2B2C289500A580BB /* ItemCell.swift in Sources */,
 				37806D2F2B2F498D00A580BB /* AuthenticatedUserView.swift in Sources */,
 				37806CF52B2BF8F000A580BB /* File.swift in Sources */,
+				3734CA1E2B2F91340076770B /* AuthenticatedNavigationStack.swift in Sources */,
 				3734CA1A2B2F87310076770B /* AppLauncher.swift in Sources */,
 				37806D192B2C26F400A580BB /* File+PreviewContent.swift in Sources */,
 				37806D352B2F601200A580BB /* User+PreviewContent.swift in Sources */,

@@ -6,11 +6,13 @@ import SwiftUI
 
 struct ItemsView: View {
     
-    let items: [ Item ]
+    let items: [ any Item ]
     
     var body: some View {
         List(items, id: \.identifier) { item in
-            ItemCell(item: item)
+            NavigationLink(value: item) {
+                ItemCell(item: item)
+            }
         }
     }
 }

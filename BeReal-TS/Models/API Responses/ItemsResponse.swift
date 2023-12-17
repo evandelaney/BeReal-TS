@@ -6,7 +6,7 @@ import Foundation
 
 struct ItemsResponse: Decodable {
     
-    var items: [ Item ]
+    var items: [ any Item ]
 
     var folders: [ Folder ] {
         items.compactMap { $0 as? Folder }
@@ -22,7 +22,7 @@ struct ItemsResponse: Decodable {
 
     init(from decoder: Decoder) throws
     {
-        var items: [ Item ] = []
+        var items: [ any Item ] = []
         var container = try decoder.unkeyedContainer()
         
         while !container.isAtEnd {
@@ -40,7 +40,7 @@ struct ItemsResponse: Decodable {
         self.items = items
     }
 
-    init(items: [ Item ])
+    init(items: [ any Item ])
     {
         self.items = items
     }
