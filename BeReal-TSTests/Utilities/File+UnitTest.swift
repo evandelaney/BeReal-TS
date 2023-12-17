@@ -12,7 +12,6 @@ extension File {
         File(
             identifier: identifier,
             parent: nil,
-            isDirectory: false,
             modified: modified,
             name: "Test File",
             size: 0,

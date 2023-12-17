@@ -33,7 +33,10 @@ struct ItemsResponse: Decodable {
                 items.append(file)
             }
             else {
-                let context = DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown item type")
+                let context = DecodingError.Context(
+                    codingPath: container.codingPath,
+                    debugDescription: "Unknown item type"
+                )
                 throw DecodingError.dataCorrupted(context)
             }
         }

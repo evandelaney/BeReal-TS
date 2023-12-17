@@ -10,8 +10,6 @@ struct File: Item {
     
     let parent: FolderIdentifier?
     
-    let isDirectory: Bool
-    
     let modified: Date
     
     let name: String
@@ -19,6 +17,44 @@ struct File: Item {
     let size: Int?
     
     let contentType: String?
+    
+    init(from decoder: Decoder) throws
+    {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        let isDirectory = try container.decode(Bool.self, forKey: .isDirectory)
+        guard !isDirectory else {
+            throw DecodingError.typeMismatch(
+                File.self,
+                DecodingError.Context(
+                    codingPath: container.codingPath,
+                    debugDescription: "Item is a `Folder`, not `File`"
+                )
+            )
+        }
+        
+        identifier = try container.decode(String.self, forKey: .identifier)
+        parent = try container.decodeIfPresent(FolderIdentifier.self, forKey: .parent)
+        modified = try container.decode(Date.self, forKey: .modified)
+        name = try container.decode(String.self, forKey: .name)
+        size = try container.decodeIfPresent(Int.self, forKey: .size)
+        contentType = try container.decodeIfPresent(String.self, forKey: .contentType)
+    }
+    
+    init(identifier: String,
+         parent: FolderIdentifier?,
+         modified: Date,
+         name: String,
+         size: Int?,
+         contentType: String?
+    ) {
+        self.identifier = identifier
+        self.parent = parent
+        self.modified = modified
+        self.name = name
+        self.size = size
+        self.contentType = contentType
+    }
     
     private enum CodingKeys: String, CodingKey {
         case identifier = "id"

@@ -9,7 +9,6 @@ extension Folder {
     static let preview1 = Folder(
         identifier: "FOLDER-PREVIEW-1",
         parent: nil,
-        isDirectory: true,
         modified: Date(),
         name: "Preview Folder #1"
     )
@@ -17,7 +16,6 @@ extension Folder {
     static let preview2 = Folder(
         identifier: "FOLDER-PREVIEW-2",
         parent: nil,
-        isDirectory: true,
         modified: Date(),
         name: "Preview Folder #2"
     )
