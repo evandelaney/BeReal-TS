@@ -12,6 +12,8 @@
 		3734CA1E2B2F91340076770B /* AuthenticatedNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */; };
 		3734CA242B2FA4E40076770B /* Date+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA232B2FA4E40076770B /* Date+UnitTests.swift */; };
 		3734CA262B2FA5180076770B /* DateFormatter+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA252B2FA5180076770B /* DateFormatter+UnitTests.swift */; };
+		3734CA282B2FAA0F0076770B /* FolderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA272B2FAA0F0076770B /* FolderState.swift */; };
+		3734CA2A2B2FAC440076770B /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA292B2FAC440076770B /* StateMachineError.swift */; };
 		37806CC52B2BF7DD00A580BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC42B2BF7DD00A580BB /* Assets.xcassets */; };
 		37806CC82B2BF7DD00A580BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */; };
 		37806CEB2B2BF88300A580BB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CEA2B2BF88300A580BB /* App.swift */; };
@@ -66,6 +68,8 @@
 		3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedNavigationStack.swift; sourceTree = "<group>"; };
 		3734CA232B2FA4E40076770B /* Date+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+UnitTests.swift"; sourceTree = "<group>"; };
 		3734CA252B2FA5180076770B /* DateFormatter+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+UnitTests.swift"; sourceTree = "<group>"; };
+		3734CA272B2FAA0F0076770B /* FolderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderState.swift; sourceTree = "<group>"; };
+		3734CA292B2FAC440076770B /* StateMachineError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineError.swift; sourceTree = "<group>"; };
 		37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeReal-TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37806CC42B2BF7DD00A580BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -196,7 +200,9 @@
 				37806D282B2EA4B800A580BB /* AuthenticationState.swift */,
 				37806CF22B2BF8F000A580BB /* File.swift */,
 				37806CF42B2BF8F000A580BB /* Folder.swift */,
+				3734CA272B2FAA0F0076770B /* FolderState.swift */,
 				37806CF32B2BF8F000A580BB /* Item.swift */,
+				3734CA292B2FAC440076770B /* StateMachineError.swift */,
 				37806D052B2C070E00A580BB /* User.swift */,
 				37806CEF2B2BF8BE00A580BB /* API Responses */,
 			);
@@ -387,8 +393,10 @@
 				37806D242B2C2FBD00A580BB /* AuthenticationViewModel.swift in Sources */,
 				37806D332B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift in Sources */,
 				37806CEB2B2BF88300A580BB /* App.swift in Sources */,
+				3734CA2A2B2FAC440076770B /* StateMachineError.swift in Sources */,
 				37806D062B2C070E00A580BB /* User.swift in Sources */,
 				37806D212B2C2F3E00A580BB /* LoginView.swift in Sources */,
+				3734CA282B2FAA0F0076770B /* FolderState.swift in Sources */,
 				37806D172B2C25C300A580BB /* ItemsView.swift in Sources */,
 				37806CF12B2BF8E800A580BB /* ItemsResponse.swift in Sources */,
 				37806D1D2B2C2AB600A580BB /* Folder+PreviewContent.swift in Sources */,

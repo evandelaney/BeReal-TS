@@ -13,10 +13,6 @@ actor AuthenticationState {
         case error(Swift.Error)
     }
     
-    enum Error: LocalizedError {
-        case invalidStateTransition
-    }
-    
     private(set) var state: State
     
     init(initialState: State = .unauthenticated)
@@ -40,7 +36,7 @@ actor AuthenticationState {
             state = nextState
             
         default:
-            throw Error.invalidStateTransition
+            throw StateMachineError.invalidTransition(from: state, to: nextState)
         }
     }
 }
