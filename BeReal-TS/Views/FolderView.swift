@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FolderView: View {
     
-    @State var viewModel: FolderViewModel
+    @State var viewModel: ItemViewModel<Folder, [ any Item ]>
     
     var body: some View {
         if let items = viewModel.items {
@@ -31,7 +31,7 @@ struct FolderView: View {
         }
         else if viewModel.isEmpty {
             VStack {
-                Text("No items here.")
+                Text("Nothing here.")
                     .font(.title)
                 Text("Why don't you add something?")
                     .foregroundStyle(.secondary)
@@ -45,9 +45,9 @@ struct FolderView: View {
 
 #Preview {
     FolderView(
-        viewModel: FolderViewModel(
-            client: globalClient,
-            root: .preview1
+        viewModel: ItemViewModel(
+            root: Folder.preview1,
+            getter: globalClient.getItems(at:)
         )
     )
 }

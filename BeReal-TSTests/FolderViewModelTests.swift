@@ -7,7 +7,7 @@ import XCTest
 
 final class FolderViewModelTests: XCTestCase {
     
-    private var sut: FolderViewModel!
+    private var sut: ItemViewModel<Folder, [ any Item ]>!
     private var root: Folder!
     private var mockClient: MockAPIClient!
     
@@ -17,7 +17,7 @@ final class FolderViewModelTests: XCTestCase {
         
         mockClient = MockAPIClient()
         root = Folder.make(identifier: "UNIT TEST ROOT")
-        sut = FolderViewModel(client: mockClient, root: root)
+        sut = ItemViewModel(root: root, getter: mockClient.getItems(at:))
     }
     
     override func tearDownWithError() throws
@@ -56,64 +56,61 @@ final class FolderViewModelTests: XCTestCase {
             File.make(identifier: "UNIT TEST 2")
         ]
         
-        await sut.loadItems()
+        await sut.load()
         
-        XCTAssertEqual(sut.state, .content([
-            Folder.make(identifier: "UNIT TEST 1"),
-            File.make(identifier: "UNIT TEST 2")
-        ]))
+        AssertStateContent(sut.state)
     }
-
+    
     func testItemsAreAvailableAfterSuccessfulLoad() async
     {
         mockClient.items = [
             Folder.make(identifier: "UNIT TEST 1"),
             File.make(identifier: "UNIT TEST 2")
         ]
-
-        await sut.loadItems()
-
+        
+        await sut.load()
+        
         XCTAssertEqual(sut.items?.count, 2)
     }
-
+    
     func testEmptyLoadItems() async
     {
         mockClient.items = []
-
-        await sut.loadItems()
-
-        XCTAssertEqual(sut.state, .empty)
+        
+        await sut.load()
+        
+        AssertStateEmpty(sut.state)
     }
-
+    
     func testIsEmptyIsTrueAfterEmptyLoad() async
     {
         mockClient.items = []
-
-        await sut.loadItems()
-
+        
+        await sut.load()
+        
         XCTAssertTrue(sut.isEmpty)
     }
-
+    
     func testErrorLoadItems() async
     {
         mockClient.error = NSError(domain: "UnitTest", code: 42)
-
-        await sut.loadItems()
-
-        XCTAssertEqual(sut.state, .error(NSError(domain: "UnitTest", code: 42)))
+        
+        await sut.load()
+        
+        AssertStateError(sut.state)
     }
-
+    
     func testErrorIsAvailableAfterErrorLoad() async
     {
         mockClient.error = NSError(domain: "UnitTest", code: 42)
-
-        await sut.loadItems()
-
+        
+        await sut.load()
+        
         XCTAssertNotNil(sut.error)
     }
 }
 
-private final class MockAPIClient: FolderClient {
+private final class MockAPIClient {
     
     var items: [ any Item ]?
     var error: Error?

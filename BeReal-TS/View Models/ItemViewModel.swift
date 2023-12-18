@@ -3,21 +3,20 @@
 //
 
 import Observation
-import PhotosUI
 
-protocol FolderClient: AnyObject {
-
-    func getItems(at folder: Folder) async throws -> [ any Item ]
+protocol EmptyRepresentable {
+    
+    var isEmpty: Bool { get }
 }
 
-extension APIClient: FolderClient { }
+extension Array: EmptyRepresentable { }
 
 @Observable
-final class FolderViewModel {
+final class ItemViewModel<Root: Item, Detail: EmptyRepresentable> {
     
-    private(set) var state: FolderState.State
+    private(set) var state: ItemState<Detail>.State
     
-    var items: [ any Item ]? {
+    var items: Detail? {
         if case let .content(items) = state {
             return items
         }
@@ -45,44 +44,35 @@ final class FolderViewModel {
         return false
     }
     
-    let client: FolderClient
+    var getter: (Root) async throws -> Detail
     
-    let root: Folder
+    let root: Root
     
-    private var stateMachine: FolderState
+    private var stateMachine: ItemState<Detail>
     
-    init(client: FolderClient, root: Folder)
+    init(root: Root, getter: @escaping (Root) async throws -> Detail)
     {
-        self.client = client
         self.root = root
-        self.stateMachine = FolderState(initialState: .empty)
+        self.getter = getter
+        self.stateMachine = ItemState(initialState: .empty)
         self.state = .empty
         
         Task {
-            await loadItems()
+            await load()
         }
     }
     
-    func createFolder(name: String) async
+    func load() async
     {
-        // TODO: Needs implementation
-    }
-    
-    func createFile(name: String, image: UIImage) async
-    {
-        // TODO: Needs implementation
-    }
-    
-    func loadItems() async
-    {
+
         do {
             await stateMachineTransition(to: .loading)
-            let items = try await client.getItems(at: root)
-            let newState = if items.count > 0 {
-                FolderState.State.content(items)
+            let items = try await getter(root)
+            let newState = if items.isEmpty != true {
+                ItemState<Detail>.State.content(items)
             }
             else {
-                FolderState.State.empty
+                ItemState<Detail>.State.empty
             }
             await stateMachineTransition(to: newState)
         }
@@ -91,7 +81,7 @@ final class FolderViewModel {
         }
     }
     
-    private func stateMachineTransition(to newState: FolderState.State) async
+    private func stateMachineTransition(to newState: ItemState<Detail>.State) async
     {
         do {
             try await stateMachine.transition(to: newState)

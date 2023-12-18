@@ -7,13 +7,13 @@ import XCTest
 
 final class FolderStateTests: XCTestCase {
     
-    private var machine: FolderState!
+    private var machine: ItemState<[ any Item ]>!
     
     override func setUpWithError() throws
     {
         try super.setUpWithError()
         
-        machine = FolderState()
+        machine = ItemState()
     }
     
     override func tearDownWithError() throws
@@ -27,7 +27,7 @@ final class FolderStateTests: XCTestCase {
     {
         let state = await machine.state
         
-        XCTAssertEqual(state, .empty)
+        AssertStateEmpty(state)
     }
     
     func testTransitionFromEmptyToLoading() async throws
@@ -35,12 +35,12 @@ final class FolderStateTests: XCTestCase {
         try await machine.transition(to: .loading)
         let state = await machine.state
         
-        XCTAssertEqual(state, .loading)
+        AssertStateLoading(state)
     }
     
     func testTransitionFromContentToLoading() async throws
     {
-        machine = FolderState(initialState: .content([
+        machine = ItemState(initialState: .content([
             Folder.make(identifier: "UNIT TEST 1"),
             File.make(identifier: "UNIT TEST 2")
         ]))
@@ -48,22 +48,22 @@ final class FolderStateTests: XCTestCase {
         try await machine.transition(to: .loading)
         let state = await machine.state
         
-        XCTAssertEqual(state, .loading)
+        AssertStateLoading(state)
     }
     
     func testTransitionFromErrorToLoading() async throws
     {
-        machine = FolderState(initialState: .error(NSError(domain: "UnitTest", code: 42)))
+        machine = ItemState(initialState: .error(NSError(domain: "UnitTest", code: 42)))
         
         try await machine.transition(to: .loading)
         let state = await machine.state
         
-        XCTAssertEqual(state, .loading)
+        AssertStateLoading(state)
     }
     
     func testTransitionFromLoadingToContent() async throws
     {
-        machine = FolderState(initialState: .loading)
+        machine = ItemState(initialState: .loading)
         
         try await machine.transition(to: .content([
             Folder.make(identifier: "UNIT TEST 1"),
@@ -71,36 +71,33 @@ final class FolderStateTests: XCTestCase {
         ]))
         let state = await machine.state
         
-        XCTAssertEqual(state, .content([
-            Folder.make(identifier: "UNIT TEST 1"),
-            File.make(identifier: "UNIT TEST 2")
-        ]))
+        AssertStateContent(state)
     }
     
     func testTransitionFromLoadingToEmpty() async throws
     {
-        machine = FolderState(initialState: .loading)
+        machine = ItemState(initialState: .loading)
         
         try await machine.transition(to: .empty)
         let state = await machine.state
         
-        XCTAssertEqual(state, .empty)
+        AssertStateEmpty(state)
     }
     
     func testTransitionFromLoadingToError() async throws
     {
-        machine = FolderState(initialState: .loading)
+        machine = ItemState(initialState: .loading)
         let error = NSError(domain: "UnitTest", code: 42)
         
         try await machine.transition(to: .error(error))
         let state = await machine.state
         
-        XCTAssertEqual(state, .error(error))
+        AssertStateError(state)
     }
     
     func testTransitionFromContentToEmpty() async throws
     {
-        machine = FolderState(initialState: .content([
+        machine = ItemState(initialState: .content([
             Folder.make(identifier: "UNIT TEST 1"),
             File.make(identifier: "UNIT TEST 2")
         ]))
@@ -109,10 +106,59 @@ final class FolderStateTests: XCTestCase {
             try await machine.transition(to: .empty)
         }
         catch {
-            XCTAssertTrue(error is StateMachineError<FolderState.State>)
+            XCTAssertTrue(error is StateMachineError<ItemState<[ any Item ]>.State>)
             return
         }
         
         XCTFail()
     }
 }
+
+public func AssertStateEmpty<U>(
+    _ expression: @autoclosure () -> ItemState<U>.State,
+    _ message: @autoclosure () -> String = "",
+    file: StaticString = #filePath,
+    line: UInt = #line
+) {
+    guard case .empty = expression() else {
+        XCTFail()
+        return
+    }
+}
+
+public func AssertStateContent<U>(
+    _ expression: @autoclosure () -> ItemState<U>.State,
+    _ message: @autoclosure () -> String = "",
+    file: StaticString = #filePath,
+    line: UInt = #line
+) {
+    guard case .content = expression() else {
+        XCTFail()
+        return
+    }
+}
+
+public func AssertStateError<U>(
+    _ expression: @autoclosure () -> ItemState<U>.State,
+    _ message: @autoclosure () -> String = "",
+    file: StaticString = #filePath,
+    line: UInt = #line
+) {
+    guard case .error = expression() else {
+        XCTFail()
+        return
+    }
+}
+
+public func AssertStateLoading<U>(
+    _ expression: @autoclosure () -> ItemState<U>.State,
+    _ message: @autoclosure () -> String = "",
+    file: StaticString = #filePath,
+    line: UInt = #line
+) {
+    guard case .loading = expression() else {
+        XCTFail()
+        return
+    }
+}
+

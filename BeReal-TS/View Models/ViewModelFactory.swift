@@ -30,9 +30,9 @@ final class ViewModelFactory {
         )
     }
     
-    func makeFolderViewModel(from folder: Folder) -> FolderViewModel
+    func makeFolderViewModel(from folder: Folder) -> ItemViewModel<Folder, [ any Item ]>
     {
-        return FolderViewModel(client: client, root: folder)
+        return ItemViewModel(root: folder, getter: client.getItems(at:))
     }
 }
 

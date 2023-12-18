@@ -10,14 +10,12 @@
 		3734CA1A2B2F87310076770B /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA192B2F87310076770B /* AppLauncher.swift */; };
 		3734CA1C2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA1B2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift */; };
 		3734CA1E2B2F91340076770B /* AuthenticatedNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */; };
-		3734CA202B2F9C690076770B /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA1F2B2F9C690076770B /* FolderViewModel.swift */; };
 		3734CA222B2F9F260076770B /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA212B2F9F260076770B /* FolderView.swift */; };
 		3734CA242B2FA4E40076770B /* Date+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA232B2FA4E40076770B /* Date+UnitTests.swift */; };
 		3734CA262B2FA5180076770B /* DateFormatter+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA252B2FA5180076770B /* DateFormatter+UnitTests.swift */; };
-		3734CA282B2FAA0F0076770B /* FolderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA272B2FAA0F0076770B /* FolderState.swift */; };
+		3734CA282B2FAA0F0076770B /* ItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA272B2FAA0F0076770B /* ItemState.swift */; };
 		3734CA2A2B2FAC440076770B /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA292B2FAC440076770B /* StateMachineError.swift */; };
-		3743760D2B2FB7490081F0CB /* FolderStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743760C2B2FB7490081F0CB /* FolderStateTests.swift */; };
-		3743760F2B2FBF8A0081F0CB /* FolderViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743760E2B2FBF8A0081F0CB /* FolderViewModelTests.swift */; };
+		374376112B2FC6C20081F0CB /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374376102B2FC6C20081F0CB /* ItemViewModel.swift */; };
 		37806CC52B2BF7DD00A580BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC42B2BF7DD00A580BB /* Assets.xcassets */; };
 		37806CC82B2BF7DD00A580BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */; };
 		37806CEB2B2BF88300A580BB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CEA2B2BF88300A580BB /* App.swift */; };
@@ -54,6 +52,8 @@
 		37806D332B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D322B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift */; };
 		37806D352B2F601200A580BB /* User+PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D342B2F601200A580BB /* User+PreviewContent.swift */; };
 		37806D372B2F607B00A580BB /* AuthenticatedUserViewModel+PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806D362B2F607B00A580BB /* AuthenticatedUserViewModel+PreviewContent.swift */; };
+		379C3F812B2FCEE800D64F21 /* FolderStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C3F7F2B2FCEE800D64F21 /* FolderStateTests.swift */; };
+		379C3F822B2FCEE800D64F21 /* FolderViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C3F802B2FCEE800D64F21 /* FolderViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,14 +70,12 @@
 		3734CA192B2F87310076770B /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
 		3734CA1B2B2F8C910076770B /* AuthenticatedUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserViewModelTests.swift; sourceTree = "<group>"; };
 		3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedNavigationStack.swift; sourceTree = "<group>"; };
-		3734CA1F2B2F9C690076770B /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		3734CA212B2F9F260076770B /* FolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
 		3734CA232B2FA4E40076770B /* Date+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+UnitTests.swift"; sourceTree = "<group>"; };
 		3734CA252B2FA5180076770B /* DateFormatter+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+UnitTests.swift"; sourceTree = "<group>"; };
-		3734CA272B2FAA0F0076770B /* FolderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderState.swift; sourceTree = "<group>"; };
+		3734CA272B2FAA0F0076770B /* ItemState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemState.swift; sourceTree = "<group>"; };
 		3734CA292B2FAC440076770B /* StateMachineError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineError.swift; sourceTree = "<group>"; };
-		3743760C2B2FB7490081F0CB /* FolderStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderStateTests.swift; sourceTree = "<group>"; };
-		3743760E2B2FBF8A0081F0CB /* FolderViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModelTests.swift; sourceTree = "<group>"; };
+		374376102B2FC6C20081F0CB /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeReal-TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37806CC42B2BF7DD00A580BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -117,6 +115,8 @@
 		37806D322B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserViewModel.swift; sourceTree = "<group>"; };
 		37806D342B2F601200A580BB /* User+PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+PreviewContent.swift"; sourceTree = "<group>"; };
 		37806D362B2F607B00A580BB /* AuthenticatedUserViewModel+PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticatedUserViewModel+PreviewContent.swift"; sourceTree = "<group>"; };
+		379C3F7F2B2FCEE800D64F21 /* FolderStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderStateTests.swift; sourceTree = "<group>"; };
+		379C3F802B2FCEE800D64F21 /* FolderViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,9 +195,9 @@
 				37806D262B2E994400A580BB /* AuthenticationStateTests.swift */,
 				37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */,
 				37806CF92B2BFE6B00A580BB /* FileTests.swift */,
-				3743760C2B2FB7490081F0CB /* FolderStateTests.swift */,
-				3743760E2B2FBF8A0081F0CB /* FolderViewModelTests.swift */,
+				379C3F7F2B2FCEE800D64F21 /* FolderStateTests.swift */,
 				37806CFB2B2BFE7600A580BB /* FolderTests.swift */,
+				379C3F802B2FCEE800D64F21 /* FolderViewModelTests.swift */,
 				37806CEC2B2BF89400A580BB /* ItemsResponseTests.swift */,
 				37806D072B2C081500A580BB /* UserTests.swift */,
 			);
@@ -210,8 +210,8 @@
 				37806D282B2EA4B800A580BB /* AuthenticationState.swift */,
 				37806CF22B2BF8F000A580BB /* File.swift */,
 				37806CF42B2BF8F000A580BB /* Folder.swift */,
-				3734CA272B2FAA0F0076770B /* FolderState.swift */,
 				37806CF32B2BF8F000A580BB /* Item.swift */,
+				3734CA272B2FAA0F0076770B /* ItemState.swift */,
 				3734CA292B2FAC440076770B /* StateMachineError.swift */,
 				37806D052B2C070E00A580BB /* User.swift */,
 				37806CEF2B2BF8BE00A580BB /* API Responses */,
@@ -263,10 +263,10 @@
 				37806D1E2B2C2E5600A580BB /* AuthContainerView.swift */,
 				3734CA1D2B2F91340076770B /* AuthenticatedNavigationStack.swift */,
 				37806D2E2B2F498D00A580BB /* AuthenticatedUserView.swift */,
+				3734CA212B2F9F260076770B /* FolderView.swift */,
 				37806D1A2B2C289500A580BB /* ItemCell.swift */,
 				37806D162B2C25C300A580BB /* ItemsView.swift */,
 				37806D202B2C2F3E00A580BB /* LoginView.swift */,
-				3734CA212B2F9F260076770B /* FolderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 			children = (
 				37806D322B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift */,
 				37806D232B2C2FBD00A580BB /* AuthenticationViewModel.swift */,
-				3734CA1F2B2F9C690076770B /* FolderViewModel.swift */,
+				374376102B2FC6C20081F0CB /* ItemViewModel.swift */,
 				37806D302B2F54C100A580BB /* ViewModelFactory.swift */,
 			);
 			path = "View Models";
@@ -394,7 +394,6 @@
 				37806D0A2B2C09E000A580BB /* DateDecodingStrategy+BeReal.swift in Sources */,
 				37806D1F2B2C2E5600A580BB /* AuthContainerView.swift in Sources */,
 				37806D0D2B2C0CFB00A580BB /* APIClient.swift in Sources */,
-				3734CA202B2F9C690076770B /* FolderViewModel.swift in Sources */,
 				37806D312B2F54C100A580BB /* ViewModelFactory.swift in Sources */,
 				37806D1B2B2C289500A580BB /* ItemCell.swift in Sources */,
 				37806D2F2B2F498D00A580BB /* AuthenticatedUserView.swift in Sources */,
@@ -404,13 +403,14 @@
 				37806D192B2C26F400A580BB /* File+PreviewContent.swift in Sources */,
 				37806D352B2F601200A580BB /* User+PreviewContent.swift in Sources */,
 				37806D242B2C2FBD00A580BB /* AuthenticationViewModel.swift in Sources */,
+				374376112B2FC6C20081F0CB /* ItemViewModel.swift in Sources */,
 				37806D332B2F5EBF00A580BB /* AuthenticatedUserViewModel.swift in Sources */,
 				3734CA222B2F9F260076770B /* FolderView.swift in Sources */,
 				37806CEB2B2BF88300A580BB /* App.swift in Sources */,
 				3734CA2A2B2FAC440076770B /* StateMachineError.swift in Sources */,
 				37806D062B2C070E00A580BB /* User.swift in Sources */,
 				37806D212B2C2F3E00A580BB /* LoginView.swift in Sources */,
-				3734CA282B2FAA0F0076770B /* FolderState.swift in Sources */,
+				3734CA282B2FAA0F0076770B /* ItemState.swift in Sources */,
 				37806D172B2C25C300A580BB /* ItemsView.swift in Sources */,
 				37806CF12B2BF8E800A580BB /* ItemsResponse.swift in Sources */,
 				37806D1D2B2C2AB600A580BB /* Folder+PreviewContent.swift in Sources */,
@@ -424,7 +424,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379C3F822B2FCEE800D64F21 /* FolderViewModelTests.swift in Sources */,
 				37806D082B2C081500A580BB /* UserTests.swift in Sources */,
+				379C3F812B2FCEE800D64F21 /* FolderStateTests.swift in Sources */,
 				37806CED2B2BF89400A580BB /* ItemsResponseTests.swift in Sources */,
 				37806D022B2C056300A580BB /* File+UnitTest.swift in Sources */,
 				3734CA242B2FA4E40076770B /* Date+UnitTests.swift in Sources */,
@@ -434,11 +436,9 @@
 				37806CFC2B2BFE7600A580BB /* FolderTests.swift in Sources */,
 				37806D272B2E994400A580BB /* AuthenticationStateTests.swift in Sources */,
 				37806D2B2B2F383B00A580BB /* AuthenticationViewModelTests.swift in Sources */,
-				3743760F2B2FBF8A0081F0CB /* FolderViewModelTests.swift in Sources */,
 				37806CFA2B2BFE6B00A580BB /* FileTests.swift in Sources */,
 				37806D2D2B2F3C3800A580BB /* User+UnitTest.swift in Sources */,
 				37806D042B2C058500A580BB /* Folder+UnitTest.swift in Sources */,
-				3743760D2B2FB7490081F0CB /* FolderStateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
