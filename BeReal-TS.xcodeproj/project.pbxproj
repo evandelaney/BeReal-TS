@@ -59,6 +59,7 @@
 		37E70A322B2FE5D40022A6C2 /* ItemErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E70A312B2FE5D40022A6C2 /* ItemErrorView.swift */; };
 		37E70A342B2FE64A0022A6C2 /* ItemLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E70A332B2FE64A0022A6C2 /* ItemLoadingView.swift */; };
 		37E70A362B2FEB030022A6C2 /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E70A352B2FEB030022A6C2 /* LabeledTextField.swift */; };
+		37E70A382B3005A90022A6C2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E70A372B3005A90022A6C2 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		37E70A312B2FE5D40022A6C2 /* ItemErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemErrorView.swift; sourceTree = "<group>"; };
 		37E70A332B2FE64A0022A6C2 /* ItemLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLoadingView.swift; sourceTree = "<group>"; };
 		37E70A352B2FEB030022A6C2 /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
+		37E70A372B3005A90022A6C2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 				37E70A312B2FE5D40022A6C2 /* ItemErrorView.swift */,
 				37E70A332B2FE64A0022A6C2 /* ItemLoadingView.swift */,
 				37E70A352B2FEB030022A6C2 /* LabeledTextField.swift */,
+				37E70A372B3005A90022A6C2 /* ImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				3734CA1A2B2F87310076770B /* AppLauncher.swift in Sources */,
 				37806D192B2C26F400A580BB /* File+PreviewContent.swift in Sources */,
 				37806D352B2F601200A580BB /* User+PreviewContent.swift in Sources */,
+				37E70A382B3005A90022A6C2 /* ImagePicker.swift in Sources */,
 				37E70A302B2FE5860022A6C2 /* ItemEmptyView.swift in Sources */,
 				37806D242B2C2FBD00A580BB /* AuthenticationViewModel.swift in Sources */,
 				374376112B2FC6C20081F0CB /* ItemViewModel.swift in Sources */,
