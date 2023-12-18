@@ -17,7 +17,10 @@ final class FolderViewModelTests: XCTestCase {
         
         mockClient = MockAPIClient()
         root = Folder.make(identifier: "UNIT TEST ROOT")
-        sut = ItemViewModel(root: root, getter: mockClient.getItems(at:))
+        sut = ItemViewModel(
+            root: root,
+            getter: mockClient.getItems(at:)
+        )
     }
     
     override func tearDownWithError() throws

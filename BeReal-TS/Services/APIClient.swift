@@ -74,6 +74,24 @@ final class APIClient {
         try await makeRequest(with: "items/\(file.identifier)/data").0
     }
 
+    func createFolder(in folder: Folder, named name: String) async throws -> Folder
+    {
+        guard let authorizationDelegate else { throw NSError(domain: "com.bereal.apiclient" , code: 4001) }
+        let basicAuth = try authorizationDelegate.getBasicAuth()
+        
+        var request = URLRequest(url: URL(string: "http://\(hostname)/items/\(folder.identifier)")!)
+        request.httpMethod = "POST"
+        
+        request.setValue(basicAuth, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let json = "{ \"name\" : \"\(name)\" }".data(using: .utf8)!
+        request.httpBody = json
+        
+        let (data, _) = try await urlSession.data(for: request, delegate: nil)
+        return try decoder.decode(Folder.self, from: data)
+    }
+    
     func upload(data: Data, filename: String, to folder: Folder) async throws -> File
     {
         guard let authorizationDelegate else { throw NSError(domain: "com.bereal.apiclient" , code: 4001) }

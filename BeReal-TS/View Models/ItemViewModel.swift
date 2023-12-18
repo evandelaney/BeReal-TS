@@ -49,14 +49,32 @@ final class ItemViewModel<Root: Item, Detail: EmptyRepresentable> {
     
     var getter: (Root) async throws -> Detail
     
+    var canCreateFolder: Bool {
+        folderCreator != nil
+    }
+    
+    var folderCreator: ((Root, String) async throws -> Detail)?
+    
+    var canCreateImage: Bool {
+        imageCreator != nil
+    }
+    
+    var imageCreator: ((Root, String, Data) async throws -> Detail)?
+    
     let root: Root
     
     private var stateMachine: ItemState<Detail>
     
-    init(root: Root, getter: @escaping (Root) async throws -> Detail)
-    {
+    init(
+        root: Root,
+        getter: @escaping (Root) async throws -> Detail,
+        imageCreator: ((Root, String, Data) async throws -> Detail)? = nil,
+        folderCreator: ((Root, String) async throws -> Detail)? = nil
+    ) {
         self.root = root
         self.getter = getter
+        self.folderCreator = folderCreator
+        self.imageCreator = imageCreator
         self.stateMachine = ItemState(initialState: .empty)
         self.state = .empty
         
@@ -67,10 +85,26 @@ final class ItemViewModel<Root: Item, Detail: EmptyRepresentable> {
     
     func load() async
     {
-
+        await process(input: root, action: getter)
+    }
+    
+    func createFolder(name: String) async
+    {
+        guard let folderCreator else { return }
+        await process(input: (root, name), action: folderCreator)
+    }
+    
+    func createImage(name: String, data: Data) async
+    {
+        guard let imageCreator else { return }
+        await process(input: (root, name, data), action: imageCreator)
+    }
+    
+    private func process<T>(input: T, action: (T) async throws -> Detail) async
+    {
         do {
             await stateMachineTransition(to: .loading)
-            let items = try await getter(root)
+            let items = try await action(input)
             let newState = if items.isEmpty != true {
                 ItemState<Detail>.State.content(items)
             }
