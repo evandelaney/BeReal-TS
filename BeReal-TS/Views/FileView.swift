@@ -32,7 +32,7 @@ struct FileView: View {
                 .padding()
         }
         else if viewModel.isEmpty {
-            ItemEmptyView()
+            ItemEmptyView(viewModel: viewModel)
                 .padding()
         }
     }
