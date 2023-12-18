@@ -16,6 +16,8 @@
 		3734CA262B2FA5180076770B /* DateFormatter+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA252B2FA5180076770B /* DateFormatter+UnitTests.swift */; };
 		3734CA282B2FAA0F0076770B /* FolderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA272B2FAA0F0076770B /* FolderState.swift */; };
 		3734CA2A2B2FAC440076770B /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734CA292B2FAC440076770B /* StateMachineError.swift */; };
+		3743760D2B2FB7490081F0CB /* FolderStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743760C2B2FB7490081F0CB /* FolderStateTests.swift */; };
+		3743760F2B2FBF8A0081F0CB /* FolderViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743760E2B2FBF8A0081F0CB /* FolderViewModelTests.swift */; };
 		37806CC52B2BF7DD00A580BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC42B2BF7DD00A580BB /* Assets.xcassets */; };
 		37806CC82B2BF7DD00A580BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */; };
 		37806CEB2B2BF88300A580BB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37806CEA2B2BF88300A580BB /* App.swift */; };
@@ -74,6 +76,8 @@
 		3734CA252B2FA5180076770B /* DateFormatter+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+UnitTests.swift"; sourceTree = "<group>"; };
 		3734CA272B2FAA0F0076770B /* FolderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderState.swift; sourceTree = "<group>"; };
 		3734CA292B2FAC440076770B /* StateMachineError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineError.swift; sourceTree = "<group>"; };
+		3743760C2B2FB7490081F0CB /* FolderStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderStateTests.swift; sourceTree = "<group>"; };
+		3743760E2B2FBF8A0081F0CB /* FolderViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModelTests.swift; sourceTree = "<group>"; };
 		37806CBD2B2BF7DC00A580BB /* BeReal-TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeReal-TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37806CC42B2BF7DD00A580BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37806CC72B2BF7DD00A580BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				37806D262B2E994400A580BB /* AuthenticationStateTests.swift */,
 				37806D2A2B2F383B00A580BB /* AuthenticationViewModelTests.swift */,
 				37806CF92B2BFE6B00A580BB /* FileTests.swift */,
+				3743760C2B2FB7490081F0CB /* FolderStateTests.swift */,
+				3743760E2B2FBF8A0081F0CB /* FolderViewModelTests.swift */,
 				37806CFB2B2BFE7600A580BB /* FolderTests.swift */,
 				37806CEC2B2BF89400A580BB /* ItemsResponseTests.swift */,
 				37806D072B2C081500A580BB /* UserTests.swift */,
@@ -428,9 +434,11 @@
 				37806CFC2B2BFE7600A580BB /* FolderTests.swift in Sources */,
 				37806D272B2E994400A580BB /* AuthenticationStateTests.swift in Sources */,
 				37806D2B2B2F383B00A580BB /* AuthenticationViewModelTests.swift in Sources */,
+				3743760F2B2FBF8A0081F0CB /* FolderViewModelTests.swift in Sources */,
 				37806CFA2B2BFE6B00A580BB /* FileTests.swift in Sources */,
 				37806D2D2B2F3C3800A580BB /* User+UnitTest.swift in Sources */,
 				37806D042B2C058500A580BB /* Folder+UnitTest.swift in Sources */,
+				3743760D2B2FB7490081F0CB /* FolderStateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

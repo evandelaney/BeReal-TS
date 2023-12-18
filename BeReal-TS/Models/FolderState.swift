@@ -40,3 +40,30 @@ actor FolderState {
         }
     }
 }
+
+extension FolderState.State: Equatable {
+    
+    // Can cost O(n) in worst case
+    static func == (lhs: FolderState.State, rhs: FolderState.State) -> Bool
+    {
+        switch (lhs, rhs) {
+        case (.empty, .empty), (.loading, .loading):
+            return true
+
+        case (.content(let lhsItems), .content(let rhsItems)):
+            guard lhsItems.count == rhsItems.count else { return false }
+            for (index, item) in lhsItems.enumerated() {
+                if lhsItems[index].identifier != rhsItems[index].identifier {
+                    return false
+                }
+            }
+            return true
+
+        case (.error(let lhsError), .error(let rhsError)):
+            return lhsError.localizedDescription == rhsError.localizedDescription
+
+        default:
+            return false
+        }
+    }
+}

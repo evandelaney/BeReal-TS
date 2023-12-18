@@ -5,6 +5,13 @@
 import Observation
 import PhotosUI
 
+protocol FolderClient: AnyObject {
+
+    func getItems(at folder: Folder) async throws -> [ any Item ]
+}
+
+extension APIClient: FolderClient { }
+
 @Observable
 final class FolderViewModel {
     
@@ -38,13 +45,13 @@ final class FolderViewModel {
         return false
     }
     
-    let client: APIClient
+    let client: FolderClient
     
     let root: Folder
     
     private var stateMachine: FolderState
     
-    init(client: APIClient, root: Folder)
+    init(client: FolderClient, root: Folder)
     {
         self.client = client
         self.root = root
@@ -66,7 +73,7 @@ final class FolderViewModel {
         // TODO: Needs implementation
     }
     
-    private func loadItems() async
+    func loadItems() async
     {
         do {
             await stateMachineTransition(to: .loading)
