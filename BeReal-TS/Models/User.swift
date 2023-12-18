@@ -6,9 +6,9 @@ import Foundation
 
 final class User: Decodable {
 
-    var firstName: String
-    var lastName: String
-    var rootItem: Folder
+    let firstName: String
+    let lastName: String
+    let rootItem: Folder
 
     init(firstName: String, lastName: String, rootItem: Folder)
     {
