@@ -14,6 +14,7 @@ struct FolderView: View {
     var body: some View {
         if let items = viewModel.items {
             ItemsView(items: items)
+                .navigationTitle(viewModel.root.name)
         }
         else if let error = viewModel.error {
             ItemErrorView(error: error)

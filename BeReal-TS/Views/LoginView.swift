@@ -12,35 +12,84 @@ struct LoginView: View {
     @State private var password: String = ""
     
     var body: some View {
-        Spacer()
         
+        VStack{
+            Spacer()
+            
+            VStack{
+                if case .loading = viewModel.state {
+                    loading
+                }
+                else {
+                    credentialForm
+                }
+            }
+            .padding()
+            .background(Color(uiColor: .systemBackground))
+            
+            Spacer()
+            
+            Button("Log In") {
+                Task {
+                    await viewModel.logIn(username: username, password: password)
+                }
+            }
+            .buttonStyle(.borderedProminent)
+            .disabled(
+                username.isEmpty ||
+                password.isEmpty ||
+                viewModel.state == .loading
+            )
+            .padding()
+        }
+        .background(Color(uiColor: .secondarySystemBackground))
+    }
+    
+    @ViewBuilder
+    @MainActor
+    var credentialForm: some View {
         Text("Welcome!")
             .font(.title)
+            .padding(.vertical)
         
-        VStack(alignment: .leading) {
-            Text("Username")
+        
+        LabeledTextField(
+            text: $username,
+            labelText: "Username",
+            textFieldHint: "TheRealEvan555")
+        
+        LabeledTextField(
+            text: $password,
+            isSecure: true,
+            labelText: "Password",
+            textFieldHint: "password123"
+        )
+        
+        if let error = viewModel.error {
+            Text("Error: \(error.localizedDescription)")
                 .font(.caption)
-            TextField("TheRealEvan555", text: $username)
-                .textInputAutocapitalization(.never)
+                .foregroundStyle(Color.red)
         }
-        .padding()
-        
-        VStack(alignment: .leading) {
-            Text("Password")
-                .font(.caption)
-            SecureField("password123", text: $password)
-        }
-        .padding()
-        
-        Spacer()
-        
-        Button("Log In") {
-            Task {
-                await viewModel.logIn(username: username, password: password)
-            }
-        }
-        .padding()
     }
+    
+    @ViewBuilder
+    @MainActor
+    var loading: some View {
+        HStack {
+            Spacer()
+            
+            ProgressView {
+                Text("Loading...")
+            }
+            .padding(.vertical)
+            .padding(.vertical)
+            
+            Spacer()
+            
+        }
+        .padding(.vertical)
+    }
+    
 }
 
 #Preview {

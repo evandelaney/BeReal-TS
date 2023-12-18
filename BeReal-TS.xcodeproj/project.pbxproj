@@ -58,6 +58,7 @@
 		37E70A302B2FE5860022A6C2 /* ItemEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E70A2F2B2FE5860022A6C2 /* ItemEmptyView.swift */; };
 		37E70A322B2FE5D40022A6C2 /* ItemErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E70A312B2FE5D40022A6C2 /* ItemErrorView.swift */; };
 		37E70A342B2FE64A0022A6C2 /* ItemLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E70A332B2FE64A0022A6C2 /* ItemLoadingView.swift */; };
+		37E70A362B2FEB030022A6C2 /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E70A352B2FEB030022A6C2 /* LabeledTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		37E70A2F2B2FE5860022A6C2 /* ItemEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEmptyView.swift; sourceTree = "<group>"; };
 		37E70A312B2FE5D40022A6C2 /* ItemErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemErrorView.swift; sourceTree = "<group>"; };
 		37E70A332B2FE64A0022A6C2 /* ItemLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLoadingView.swift; sourceTree = "<group>"; };
+		37E70A352B2FEB030022A6C2 /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 				37E70A2F2B2FE5860022A6C2 /* ItemEmptyView.swift */,
 				37E70A312B2FE5D40022A6C2 /* ItemErrorView.swift */,
 				37E70A332B2FE64A0022A6C2 /* ItemLoadingView.swift */,
+				37E70A352B2FEB030022A6C2 /* LabeledTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				37806D0A2B2C09E000A580BB /* DateDecodingStrategy+BeReal.swift in Sources */,
 				37806D1F2B2C2E5600A580BB /* AuthContainerView.swift in Sources */,
 				37806D0D2B2C0CFB00A580BB /* APIClient.swift in Sources */,
+				37E70A362B2FEB030022A6C2 /* LabeledTextField.swift in Sources */,
 				37E70A342B2FE64A0022A6C2 /* ItemLoadingView.swift in Sources */,
 				37806D312B2F54C100A580BB /* ViewModelFactory.swift in Sources */,
 				37806D1B2B2C289500A580BB /* ItemCell.swift in Sources */,
