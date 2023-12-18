@@ -31,15 +31,11 @@ struct AuthenticatedNavigationStack<Content: View>: View {
                     )
                 }
                 .navigationDestination(for: File.self) { file in
-                    FileView()
+                    FileView(viewModel:
+                                factory.makeFileViewModel(from: file)
+                    )
                 }
         }
     }
 }
 
-struct FileView: View {
-    
-    var body: some View {
-        Text("File View")
-    }
-}

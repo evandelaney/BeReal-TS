@@ -34,5 +34,10 @@ final class ViewModelFactory {
     {
         return ItemViewModel(root: folder, getter: client.getItems(at:))
     }
+    
+    func makeFileViewModel(from file: File) -> ItemViewModel<File, Data>
+    {
+        return ItemViewModel(root: file, getter: client.getData(for:))
+    }
 }
 

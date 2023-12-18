@@ -2,6 +2,7 @@
 //  Created by Evan DeLaney on 12/17/23.
 //
 
+import Foundation
 import Observation
 
 protocol EmptyRepresentable {
@@ -10,6 +11,8 @@ protocol EmptyRepresentable {
 }
 
 extension Array: EmptyRepresentable { }
+
+extension Data: EmptyRepresentable { }
 
 @Observable
 final class ItemViewModel<Root: Item, Detail: EmptyRepresentable> {

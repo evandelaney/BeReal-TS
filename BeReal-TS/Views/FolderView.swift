@@ -16,29 +16,16 @@ struct FolderView: View {
             ItemsView(items: items)
         }
         else if let error = viewModel.error {
-            VStack {
-                Text("⚠️ Error:")
-                    .foregroundStyle(.red)
-                    .font(.largeTitle)
-                Text(error.localizedDescription)
-            }
-            .padding()
+            ItemErrorView(error: error)
+                .padding()
         }
         else if viewModel.isLoading {
-            ProgressView {
-                Text("Loading...")
-            }
+            ItemLoadingView()
+                .padding()
         }
         else if viewModel.isEmpty {
-            VStack {
-                Text("Nothing here.")
-                    .font(.title)
-                Text("Why don't you add something?")
-                    .foregroundStyle(.secondary)
-                    .font(.headline)
-                    
-            }
-            .padding()
+            ItemEmptyView()
+                .padding()
         }
     }
 }
